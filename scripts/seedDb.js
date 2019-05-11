@@ -228,6 +228,110 @@ await Bar.create({
     type:'irish pub'
 })
 await Bar.create({
+    name: 'Luce',
+    price:'$$$',
+    address:'Hilton Trinidad and Conference Center Lady Young Road',
+    zip_code:'Trinidad Trinidad',
+    phone_number:'+1 868-285-5823',
+    type:'cozy'
+})
+await Bar.create({
+    name: 'Trotters',
+    price:'$$',
+    address:'Maraval Road',
+    zip_code:'Port of Spain',
+    phone_number:'+1 868-627-8768',
+    type:'sports bar'
+})
+await Bar.create({
+    name: `Vernon's Speakeasy`,
+    price:'$$',
+    address:'6855 4th St NW, Albuquerque',
+    zip_code:'87107',
+    phone_number:'505-341-0831',
+    type:'steak house'
+})
+await Bar.create({
+    name: 'Left Turn Distilling',
+    price:'$',
+    address:'2924 Girard Blvd NE',
+    zip_code:'87107',
+    phone_number:'+1 787-412-4251',
+    type:'bar'
+})
+await Bar.create({
+    name: 'Arundel Wharf - Seafood - Cocktail Bar - Craft Beer - Wine Bar - Lobster Rolls',
+    price:'$$',
+    address:'43 Ocean Ave',
+    zip_code:'04046',
+    phone_number:'207-967-3444',
+    type:'seafood restaurant'
+})
+await Bar.create({
+    name: 'Bandaloop',
+    price:'$$$',
+    address:'Cross St',
+    zip_code:' 04046',
+    phone_number:'207-967-4994',
+    type:'organic restaurant'
+})
+await Bar.create({
+    name: 'Snc Mbl',
+    price:'$$',
+    address:'10 Quai Félix Faure',
+    zip_code:'14520 Port-en-Bessin-Huppain',
+    phone_number:'+33 2 31 21 70 44',
+    type:'bar'
+})
+await Bar.create({
+    name: 'La Rotonde',
+    price:'$$',
+    address:'11 Rue de Bayeux',
+    zip_code:'14520 Port-en-Bessin-Huppain',
+    phone_number:' +33 2 31 21 72 25',
+    type:'bar'
+})
+await Bar.create({
+    name: 'Florería Atlántico',
+    price:'$$',
+    address:'Arroyo 872',
+    zip_code:'Buenos Aires',
+    phone_number:'+54 11-4313-6093',
+    type:'chic'
+})
+await Bar.create({
+    name: 'Bar 878',
+    price:'$$',
+    address:'Thames 878',
+    zip_code:'Buenos Aires',
+    phone_number:'+54 11-4773-1098',
+    type:'bar'
+})
+await Bar.create({
+    name: 'The Blind Rabbit',
+    price:'$$',
+    address:'440 S Anaheim Blvd',
+    zip_code:'92805',
+    phone_number:'not listed',
+    type:'casual'
+})
+await Bar.create({
+    name: 'Trader Sam’s Enchanted Tiki Bar',
+    price:'$$',
+    address:'1150 Magic Way',
+    zip_code:'92802',
+    phone_number:'(714) 781-3463',
+    type:'tiki bar'
+})
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
+await Bar.create({
     name: 'La Factoría',
     price:'$$',
     address:'148 Calle San Sebastián',
