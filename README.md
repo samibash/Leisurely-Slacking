@@ -36,5 +36,5 @@ Some major challenges for our team includes:
 
 # HELPFUL LINKS USED:
 
-    Inspiration:
+  Inspiration:
     https://www.travelandleisure.com/
