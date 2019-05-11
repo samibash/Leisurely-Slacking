@@ -1,4 +1,4 @@
-const { Hotel, Destination,Bar,Review } = require('./models');
+const { Hotel, Destination, Bar, Review } = require('./models');
 
 async function seed() {
   await Hotel.destroy({ where: {}});
@@ -324,12 +324,20 @@ await Bar.create({
     type:'tiki bar'
 })
 await Bar.create({
-    name: 'La Factoría',
-    price:'$$',
-    address:'148 Calle San Sebastián',
-    zip_code:'00901',
-    phone_number:'+1 787-412-4251',
-    type:'casual'
+    name: 'Lumni - Restaurante & Bar',
+    price:'$$$',
+    address:' R. de São Pedro de Alcântara 35',
+    zip_code:' 1250-237',
+    phone_number:'+351 21 116 0210',
+    type:'restaurant'
+})
+await Bar.create({
+    name: 'Alto do Bairro - Tapas Bar',
+    price:'$',
+    address:'Tv. da Boa Hora N 39',
+    zip_code:'1200-063',
+    phone_number:'+351 961 499 060',
+    type:'tapas restaurant'
 })
 await Bar.create({
     name: 'La Factoría',
@@ -355,7 +363,63 @@ await Bar.create({
     phone_number:'+1 787-412-4251',
     type:'casual'
 })
-  // 3. Set the relationship between the students and their teacher
+await Bar.create({
+    name: 'Romanian Craft Beer',
+    price:'$$',
+    address:'Calea Victoriei 91',
+    zip_code:'010091',
+    phone_number:'+40 770 550 234',
+    type:'bar'
+})
+await Bar.create({
+    name: `Caru' cu Bere`,
+    price:'$$',
+    address:'Strada Stavropoleos 5',
+    zip_code:'030081',
+    phone_number:'+40 726 282 373',
+    type:'romanian restaurant'
+})
+await Bar.create({
+    name: 'Beereau',
+    price:'$$',
+    address:' Claire-Waldoff-Straße 4',
+    zip_code:'10117',
+    phone_number:'+49 30 31176081',
+    type:'bar'
+})
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
+await Bar.create({
+    name: 'Vincent Piano Bar',
+    price:'$$',
+    address:'Schiffbauerdamm 6/7',
+    zip_code:'10117',
+    phone_number:'+49 30 27582305',
+    type:'cocktail bar'
+})
+await Bar.create({
+    name: `Claridge's Bar`,
+    price:'$$',
+    address:`Claridge's, Brook St, Mayfai`,
+    zip_code:'W1K 4HR, ',
+    phone_number:'+44 20 7629 8860',
+    type:'casual'
+})
+await Bar.create({
+    name: 'Wine Unearthed - London Wine Tasting',
+    price:'$$',
+    address:'Finos Wine Cellar, 123 Mount St, Mayfair148 Calle San Sebastián',
+    zip_code:'W1K 3NP',
+    phone_number:'+44 345 299 8652',
+    type:'wine bar'
+})
+  // 3. Set the relationship between the  bar hotel, review and destination
   Destination.hasMany(Hotel); 
   Hotel.belongsTo(Destination)
   Hotel.hasMany(Review); 
