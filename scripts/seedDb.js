@@ -193,8 +193,64 @@ await Review.create({
     trip_type:'Traveled with family',
 })
   
-  
+//   Create Bars
 
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
+await Bar.create({
+    name: 'El Quinqué Bar',
+    price:'$',
+    address:'114 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:' +1 787-344-3859',
+    type:'cozy'
+})
+await Bar.create({
+    name: '1608 Bar à vin & fromage',
+    price:'$$',
+    address:'Fairmont Le Château Frontenac',
+    zip_code:'G1R 5J5',
+    phone_number:'+1 418-692-3861',
+    type:'groups'
+})
+await Bar.create({
+    name: 'Pub St-Patrick',
+    price:'$$',
+    address:'1200 Rue Saint-Jean',
+    zip_code:'G1R 1S8',
+    phone_number:' +1 418-694-0618',
+    type:'irish pub'
+})
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
+await Bar.create({
+    name: 'La Factoría',
+    price:'$$',
+    address:'148 Calle San Sebastián',
+    zip_code:'00901',
+    phone_number:'+1 787-412-4251',
+    type:'casual'
+})
   // 3. Set the relationship between the students and their teacher
   Destination.hasMany(Hotel); 
   Hotel.belongsTo(Destination)
