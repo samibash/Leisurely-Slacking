@@ -1,0 +1,30 @@
+{
+  "name": "Leisurely-Slacking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "dropdb --if-exists leisure_db && createdb leisure_db",
+    "db:reset": "node ./scripts/resetDb",
+    "db:seed": "node ./scripts/seedDb",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samibash/Leisurely-Slacking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samibash/Leisurely-Slacking/issues"
+  },
+  "homepage": "https://github.com/samibash/Leisurely-Slacking#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.19.0",
+    "pg": "^7.11.0",
+    "sequelize": "^5.8.5"
+  }
+}
