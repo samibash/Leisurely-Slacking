@@ -16,6 +16,12 @@ Some major challenges for our team includes:
 # Post-MVP
 
 
+# Feature List:
+    Uploading user comments to webpage
+    Map with selected places
+    Links to hotels/restaurants/bars
+    Mobile browsing (responsive design)
+
 # Component Model:
 ![screen shot 2019-05-11 at 2 17 23 pm](https://media.git.generalassemb.ly/user/19655/files/d938b780-73f7-11e9-8a48-39fe6115362c)
 
