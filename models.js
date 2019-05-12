@@ -13,28 +13,28 @@ const db = new Sequelize({
 
 const Hotel = db.define('hotel', {
     name: Sequelize.STRING,
-    loacation: Sequelize.STRING,
-    description: Sequelize.STRING
+    location: Sequelize.STRING,
+    description: Sequelize.TEXT
    
   });
 
   const Destination = db.define('destination', {
     photo: Sequelize.STRING,
-    description: Sequelize.STRING
+    description: Sequelize.TEXT
   });
+
   const Bar = db.define('bar', {
-    name: Sequelize.STRING,
-    price: Sequelize.STRING,
+    name: Sequelize.STRING, 
     address: Sequelize.STRING,
-    zip_code: Sequelize.INTEGER,
-    phone_number: Sequelize.INTEGER,
+    zip_code: Sequelize.STRING,
+    phone_number: Sequelize.STRING,
     type:Sequelize.STRING
 
   });
   const Review = db.define('review', {
     user_name: Sequelize.STRING,
     caption: Sequelize.STRING,
-    experience: Sequelize.STRING,
+    experience: Sequelize.TEXT,
     trip_type: Sequelize.STRING
   });
 

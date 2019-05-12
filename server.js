@@ -25,7 +25,14 @@ app.get('/', async (req, res) => {
       res.status(500).json({ msg: error.status })
     }
   });
-
+  app.get('/destinations', async (req, res) => {
+    try {
+        const allDestinations = await Destination.findAll()
+      res.json(allDestinations)
+    } catch (error) {
+      res.json({ msg: error.status })
+    }
+  });
 
 //   server below
 
