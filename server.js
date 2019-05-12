@@ -16,12 +16,12 @@ app.use(bodyParser.json());
 
 // route setup below
 
-app.get('/', async (req, response) => {
+app.get('/', async (req, res) => {
     try {
-      response.json({
+      res.json({
         msg: 'Welcome to Restaurant Application'
       })
-    } catch (e) {
-      response.status(500).json({ msg: e.status })
+    } catch (error) {
+      res.status(500).json({ msg: error.status })
     }
   });
