@@ -13,7 +13,7 @@ const db = new Sequelize({
 
 const Hotel = db.define('hotel', {
     name: Sequelize.STRING,
-    loacation: Sequelize.STRING,
+    location: Sequelize.STRING,
     description: Sequelize.TEXT
    
   });
