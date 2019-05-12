@@ -419,11 +419,13 @@ await Bar.create({
     phone_number:'+44 345 299 8652',
     type:'wine bar'
 })
-  // 3. Set the relationship between the  bar hotel, review and destination
+  //  Set the relationship between the  bar hotel, review and destination
   Destination.hasMany(Hotel); 
-  Hotel.belongsTo(Destination)
+  Hotel.belongsTo(Destination);
+
   Hotel.hasMany(Review); 
   Review.belongsTo(Hotel);
+
   Bar.belongsTo(Hotel);
   Hotel.hasMany(Bar);
   process.exit();

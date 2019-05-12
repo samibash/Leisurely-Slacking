@@ -37,3 +37,33 @@ const Hotel = db.define('hotel', {
     experience: Sequelize.STRING,
     trip_type: Sequelize.STRING
   });
+
+//    Model Associations 
+
+Destination.hasMany(Hotel, {
+    onDelete: 'cascade'
+  });
+  
+  Hotel.belongsTo(Destination)
+  
+  Hotel.hasMany(Review, {
+    onDelete: 'cascade'
+  });
+  
+  Review.belongsTo(Hotel)
+  
+  Hotel.hasMany(Bar, {
+    onDelete: 'cascade'
+  });
+  
+  Bar.belongsTo(Hotel)
+  
+
+  module.exports = {
+    db,
+    Hotel,
+    Review,
+    Bar,
+    Destination
+  }
+  
