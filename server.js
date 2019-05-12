@@ -19,9 +19,14 @@ app.use(bodyParser.json());
 app.get('/', async (req, res) => {
     try {
       res.json({
-        msg: 'Welcome to Restaurant Application'
+        msg: 'Welcome To Our Destination Travel Application'
       })
     } catch (error) {
       res.status(500).json({ msg: error.status })
     }
   });
+
+
+//   server below
+
+app.listen(PORT, () => console.log(`Destination app listening on port ${PORT}!`))
