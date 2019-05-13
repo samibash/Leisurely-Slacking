@@ -21,3 +21,5 @@ destinationRouter.get('/', async (req, res) => {
       res.json({ msg: error.status })
     }
   });
+
+  module.exports = destinationRouter
