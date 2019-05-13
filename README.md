@@ -27,7 +27,7 @@ Auth login
 ![screen shot 2019-05-11 at 2 17 23 pm](https://media.git.generalassemb.ly/user/19655/files/d938b780-73f7-11e9-8a48-39fe6115362c)
 
 # Entity Relationship Diagram (ERD):
-![screen shot 2019-05-11 at 2 16 58 pm](https://media.git.generalassemb.ly/user/19655/files/de960200-73f7-11e9-9ba1-99e355b18894)
+![Screen Shot 2019-05-13 at 2 21 10 PM](https://user-images.githubusercontent.com/45145737/57644615-80e5ef00-758a-11e9-802b-7cd40b0df1ec.png)
 
 # Wireframes:
 ![Screen Shot 2019-05-10 at 7 49 43 PM](https://user-images.githubusercontent.com/45145737/57572517-6aecf880-73e9-11e9-86e1-56d8a3f4ee02.png)

@@ -21,4 +21,15 @@ reviewRouter.get('/reviews/:id', async (req, res) => {
     }
 });
 
+reviewRouter.post('/', async (request, response) => {
+    try {
+      const review = await Review.create(request.body)
+      response.json({
+        review
+      })
+    } catch (e) {
+      response.status(500).json({ msg: e.message })
+    }
+  })
+
 module.exports = reviewRouter
