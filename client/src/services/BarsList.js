@@ -1,11 +1,17 @@
-import React from 'react'
+import axios from 'axios'
 
-function BarsList() {
-    return (
-        <div>
-            <h1>This is the list of bars page</h1>
-        </div>
-    )
+const URL = 'http://localhost:3005';
+
+const api = axios.create({
+    baseURL:   `${URL}/bars`
+})
+
+export const fetchAllBars = async ()=>{
+    try {
+      const resp = await api.get('/')
+    return resp.data.bars;  
+    } catch (e) {
+        console.log(e)
+    }
 }
 
-export default BarsList
