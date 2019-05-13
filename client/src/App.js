@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import Months from './components/Home/Months'
-import Destinations from './components/Destinations/Destination'
-import Bars from './components/Bars/BarsList'
-import Reviews from './components/Reviews/Reviews'
+import Destination from './services/Destination'
+import BarsList from './services/BarsList'
+import Reviews from './services/Reviews'
 import Navbar from './components/Navbar/Navbar'
 
 class App extends Component {
@@ -15,8 +15,8 @@ class App extends Component {
         <Navbar />
         <main>
           <Route exact path="/" component={ Months }></Route>
-          <Route path="/destinations" component={ Destinations }></Route>
-          <Route path="/bars" component={ Bars }></Route>
+          <Route path="/destinations" component={ Destination }></Route>
+          <Route path="/bars" component={ BarsList }></Route>
           <Route exact path="/reviews" component={ Reviews }></Route>
         </main>
       </div>
