@@ -40,11 +40,11 @@ const Hotel = db.define('hotel', {
 
 //    Model Associations 
 
-Destination.hasMany(Hotel, {
+Destination.hasMany(Review, {
     onDelete: 'cascade'
   });
   
-  Hotel.belongsTo(Destination)
+  Review.belongsTo(Destination)
   
   Hotel.hasMany(Review, {
     onDelete: 'cascade'
@@ -52,11 +52,11 @@ Destination.hasMany(Hotel, {
   
   Review.belongsTo(Hotel)
   
-  Hotel.hasMany(Bar, {
+  Bar.hasMany(Review, {
     onDelete: 'cascade'
   });
   
-  Bar.belongsTo(Hotel)
+  Review.belongsTo(Bar)
   
 
   module.exports = {
