@@ -1,0 +1,11 @@
+.month {
+    border: 2px solid black;
+}
+
+#calendar {
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 40px;
+    padding-left: 5%;
+}
