@@ -11,7 +11,6 @@ destinationRouter.get('/', async (req, res) => {
       res.status(500).json({ msg: error.status })
     }
   });
-
   
   destinationRouter.get('/destinations', async (req, res) => {
     try {
@@ -21,5 +20,20 @@ destinationRouter.get('/', async (req, res) => {
       res.json({ msg: error.status })
     }
   });
+
+  destinationRouter.get('/destinations/:id', async (request, response) => {
+    try {
+      const id = request.params.id;
+      const destination = await Destination.findByPk(id)
+  
+      if (!destination) throw Error('Restaurant not found');
+  
+      response.json({
+        destination
+      })
+    } catch (e) {
+      response.status(404).json({ msg: e.message })
+    }
+  })
 
   module.exports = destinationRouter
