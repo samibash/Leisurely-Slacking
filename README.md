@@ -11,10 +11,11 @@ Some major challenges for our team includes:
 * Creating/populating user input onto webpage
     
 # MVP
-
+CRUD functionality on Reviews
 
 # Post-MVP
-
+Mapbox
+Auth login
 
 # Feature List:
     Uploading user comments to webpage
