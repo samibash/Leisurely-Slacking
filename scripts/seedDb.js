@@ -10,7 +10,7 @@ async function seed() {
  const CasaBlanca =  await Hotel.create({
      name: 'CasaBlanca Hotel',
      location: 'Puerto Rico',
-     description: ' Is a quirky property in the heart of Old San Juan with an unbeatable location, a moderate price tag, and funky amenities, like tubs on its rooftop.'
+     description: 'Is a quirky property in the heart of Old San Juan with an unbeatable location, a moderate price tag, and funky amenities, like tubs on its rooftop.'
 })
 
 const Fairmont =   await Hotel.create({
