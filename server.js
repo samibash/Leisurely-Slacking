@@ -7,6 +7,7 @@ const app = express();
 const destinationRouter = require('./routes/destinationRouter');
 const barRouter = require('./routes/barRouter');
 const hotelRouter = require('./routes/hotelRouter');
+const reviewRouter = require('./routes/reviewRouter');
 
 const PORT = process.env.PORT || 3005
 
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use('/', destinationRouter);
 app.use('/', barRouter);
 app.use('/', hotelRouter);
+app.use('/', reviewRouter);
 
 
 
