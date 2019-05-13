@@ -1,5 +1,5 @@
 const express = require('express');
-const Bar = require('../models');
+const { Bar } = require('../models');
 const barRouter = express.Router();
 
   
@@ -11,3 +11,5 @@ const barRouter = express.Router();
       res.json({ msg: error.status })
     }
   });
+
+  module.exports = barRouter
