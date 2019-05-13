@@ -12,4 +12,13 @@ reviewRouter.get('/reviews', async (req, res) => {
     }
 });
 
+reviewRouter.get('/reviews/:id', async (req, res) => {
+    try {
+        const review = await Review.findByPk(req.params.id)
+        res.json(review)
+    } catch (error) {
+        res.json({ msg: error.status })
+    }
+});
+
 module.exports = reviewRouter
