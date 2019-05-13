@@ -2,7 +2,7 @@ import React from 'react';
 import CityLocation from '../CityLocation/CityLocation'
 
 
-const destinationList = ({destinations}) =>{
+const DestinationList = ({destinations}) =>{
   
 
     const data =  destinations && destinations.map((destination,index)=>{
@@ -18,4 +18,4 @@ return(
 
 }
 
-export default destinationList
+export default DestinationList
