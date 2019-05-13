@@ -11,7 +11,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>YERRRRRRRR</h1>
         <Navbar />
         <main>
           <Route exact path="/" component={ Months }></Route>

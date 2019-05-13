@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    height: 300px;
+}
+
+.list {
+    width: 400px;
+    height: 100px; 
+}
+
+.mapbox {
+    width: 400px;
+    height: 100px; 
+}

@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './BarsList.css';
 
 function BarsList() {
     return (
-        <div>
-            <h1>This is the list of bars page</h1>
+        <div className="container">
+            <div className="list">
+                <h1>List of Bars</h1>
+                <ul>
+                    <li><h3>Bar Name: </h3></li>
+                    <li><h3>Bar Location: </h3></li>
+                    <li><h3>Bar Phone Number: </h3></li>
+                    <li><h3>Bar Description: </h3></li>
+                </ul>
+            </div>
+            <div className="mapbox">
+                <h1>MAPBOX HERE</h1>
+            </div>
         </div>
     )
 }
