@@ -3,7 +3,7 @@ const { Review } = require('../models');
 const reviewRouter = express.Router();
 
   
-reviewRouter.get('/reviews', async (req, res) => {
+reviewRouter.get('/reviews/:id/bar', async (req, res) => {
     try {
         const allreviews = await Review.findAll()
         res.json(allreviews)
