@@ -12,7 +12,7 @@ const CityLocation = ({destination}) => {
       
         <div>
         <Link
-            to={`/update-restaurant/${destination.id}`}>Edit Destination</Link>        </div>
+            to={`/update-restaurant/${destination.id}`}>Edit Destination</Link></div>
       </div>
     );
 }
