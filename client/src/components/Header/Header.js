@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 
-
 export default class Header extends Component {
     render() {
         return (
@@ -11,7 +10,6 @@ export default class Header extends Component {
                 <a className="navbar-item" href="#">
                 <img src="https://i.imgur.com/5eSNGAX.png" width={91} height={28} />
                 </a>
-
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
