@@ -8,7 +8,7 @@ export default class Header extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
-                <img src="https://i.imgur.com/5eSNGAX.png" width={91} height={28} />
+                <img src="https://i.imgur.com/5eSNGAX.png"  width={91} height={28} />
                 </a>
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -39,15 +39,15 @@ export default class Header extends Component {
             </div>
         </nav>
 
-            /* <header>
-                <nav>
-                    <Link to={'/'}>Home</Link>
-                    <Link to={'/destinations'}>Destinations</Link>
-                    <Link to={'/hotels'}>Hotels</Link>
-                    <Link to={'/bars'}>Bars</Link>
-                    <Link to={'/create-reviews'}>Reviews</Link>
-                </nav>
-            </header> */
+            //  <header>
+            //     <nav>
+            //         <Link to={'/'}>Home</Link>
+            //         <Link to={'/destinations'}>Destinations</Link>
+            //         <Link to={'/hotels'}>Hotels</Link>
+            //         <Link to={'/bars'}>Bars</Link>
+            //         <Link to={'/create-reviews'}>Reviews</Link>
+            //     </nav>
+            // </header> 
         )
     }
 }

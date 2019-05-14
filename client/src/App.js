@@ -25,7 +25,7 @@ class App extends Component {
        hotels:[],
        bars:[],
        reviews:[],
-       
+
     }
     this.fetchBarData=this.fetchBarData.bind(this)
     this.fetchHotelData=this.fetchHotelData.bind(this)
@@ -69,7 +69,10 @@ class App extends Component {
             exact path='/destinations' 
             render={()=> <DestinationList  destinations={this.state.destinations}/>} 
           />  
-          
+            <Route 
+            exact path='/hotels' 
+            render={()=> <HotelList  hotels={this.state.hotels}/>} 
+          />  
           <Route 
             path='/create-reviews' 
             component={createReview} />
