@@ -12,13 +12,13 @@ barRouter.get('/bars', async (req, res) => {
   }
 });
 
-barRouter.get('/bars/:id', async (req, res) => {
-  try {
-    const bar = await Bar.findByPk(req.params.id)
-    res.json(bar)
-  } catch (error) {
-    res.json({ msg: error.status })
-  }
-});
+// barRouter.get('/:id', async (req, res) => {
+//   try {
+//     const bar = await Bar.findByPk(req.params.id)
+//     res.json(bar)
+//   } catch (error) {
+//     res.json({ msg: error.status })
+//   }
+// });
 
 module.exports = barRouter
