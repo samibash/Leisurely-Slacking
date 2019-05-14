@@ -39,15 +39,7 @@ export default class Header extends Component {
         //     </div>
         // </nav>
 
-             <header>
-                <nav>
-                    <Link to={'/'}>Home</Link>
-                    <Link to={'/destinations'}>Destinations</Link>
-                    <Link to={'/hotels'}>Hotels</Link>
-                    <Link to={'/bars'}>Bars</Link>
-                    <Link to={'/create-reviews'}>Reviews</Link>
-                </nav>
-            </header> 
+
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
