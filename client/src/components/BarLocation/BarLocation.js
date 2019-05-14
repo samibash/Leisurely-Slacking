@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 const BarLocation = ({bars}) => {
 
-    console.log(bars)
 
     return (
       <div className="BarItem">
@@ -14,7 +13,7 @@ const BarLocation = ({bars}) => {
         <li>{bars.type}</li>
         <div>
         <Link
-            to={`/update-bar/${bars.id}`}>Edit Destination</Link>        
+            to={`/update-bar/${bars.id}`}>Edit Bars</Link>        
             </div>
       </div>
     );
