@@ -27,11 +27,21 @@ reviewRouter.post('/reviews', async (req, res) => {
       res.send({
         createReview
       })
-      console.log( `review created`, createReview)
+      console.log(`review created`, createReview)
     } catch (e) {
       res.status(500).json({ msg: e.message })
     }
   })
+
+reviewRouter.put('/reviews/:id', async (req, res) => {
+  try {
+    const updateReview = await Review.findByPk(req.params.id);
+    if(updateReview) await Review.update(req.body);
+    res.json({ updateReview });
+  } catch (e) {
+    console.log(e.message);
+  }
+})
 
 reviewRouter.delete('/reviews/:id', async (req, res) => {
     try {
@@ -41,6 +51,6 @@ reviewRouter.delete('/reviews/:id', async (req, res) => {
     } catch (e) {
       console.log(e.message);
     }
-  });
+});
 
 module.exports = reviewRouter

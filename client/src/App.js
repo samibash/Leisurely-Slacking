@@ -47,7 +47,8 @@ class App extends Component {
     })
     console.log(bars)
     }
-    fetchHotelData = async ()=>{
+
+  fetchHotelData = async ()=>{
       const hotels =  await fetchHotel()
       this.setState({
         hotels: hotels
@@ -76,19 +77,14 @@ class App extends Component {
           />  
           <Route 
             path='/create-reviews' 
-            component={createReview} />
+            component={createReview} 
+            reviews={this.state.reviews} />
           
           <Route 
             exact path= '/bars'
             render={()=> <BarsList  bars={this.state.bars}/>} 
           />   
         </Switch>
-        {/* <main>
-          <Route exact path="/" component={ Months }></Route>
-          <Route path="/destinations" component={ Destination }></Route>
-          <Route path="/bars" component={ BarsList }></Route>
-          <Route exact path="/reviews" component={ Reviews }></Route>
-        </main> */}
       </div>
     );
   }

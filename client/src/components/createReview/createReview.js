@@ -7,7 +7,7 @@ class CreateReview extends Component {
       super(props)
     
       this.state = {
-         review:[],
+         review: props.reviews,
          created: false
       };
     };
