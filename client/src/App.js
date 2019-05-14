@@ -7,12 +7,15 @@ import createReview from "./components/createReview/createReview"
 
 import{fetchDestination} from './services/Destination'
 import{fetchAllBars} from './services/Bars'
-import DestinationList from "./components/DestinationList/DestinationList"
+import{fetchHotel} from './services/Hotels'
+import DestinationList from "./components/DestinationList/destinationList"
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
+import HotelList from './components/HotelList/HotelList';
+
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +28,8 @@ class App extends Component {
        reviews:[]
     }
     this.fetchBarData=this.fetchBarData.bind(this)
+    this.fetchHotelData=this.fetchHotelData.bind(this)
+
   }
   
   fetchDestinationData = async ()=>{
@@ -42,10 +47,18 @@ class App extends Component {
     })
     console.log(bars)
     }
+    fetchHotelData = async ()=>{
+      const hotels =  await fetchHotel()
+      this.setState({
+        hotels: hotels
+      })
+      console.log(hotels)
+      }
 
   componentDidMount(){
     this.fetchDestinationData()
     this.fetchBarData()
+    this.fetchHotelData()
   }
   render() {
     return (
