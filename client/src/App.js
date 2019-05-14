@@ -14,6 +14,7 @@ import{fetchHotel} from './services/Hotels'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
+import DestinationList from './components/DestinationList/destinationList';
 
 
 class App extends Component {
