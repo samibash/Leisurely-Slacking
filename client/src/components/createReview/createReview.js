@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom'
 import { createReview } from '../../services/Reviews';
-
+import './CreateReview.css';
 class CreateReview extends Component {
     constructor(props) {
       super(props)
@@ -33,47 +34,91 @@ class CreateReview extends Component {
         const review = await createReview(newReview)
         console.log(review)
         this.setState({
-            newReview: newReview,
+            review: review,
             created: true
         })
     }
 
     render() {
+        if(this.state.created === true){
+            return <Redirect to="/"/>
+        }
         return (
-            <div>
-                <h1>Welcome to the Review page</h1>
-                <form onSubmit={this.onReviewFormSubmit}>
-                    <div>              
-                        <label htmlFor="name">Username:</label>
-                        <input 
-                            onChange={this.onReviewFormChange}
-                            name="user_name"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="name">Caption:</label>
-                        <input 
-                            onChange={this.onReviewFormChange}
-                            name="caption"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="name">Experience:</label>
-                        <input 
-                            onChange={this.onReviewFormChange}
-                            name="experience"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="name">Trip type:</label>
-                        <input 
-                            onChange={this.onReviewFormChange}
-                            name="trip_type"
-                        />
-                    </div>
-                    <button type="submit">Add Review</button>
-                </form>
+        
+                
+     <form className="datForm" onSubmit={this.onReviewFormSubmit}>
+                 <h1>Give Us Your Review</h1>
+
+  <div className="field">
+    <label htmlFor="name" className="label">Username</label>
+    <div className="control">
+    <div className="control has-icons-left has-icons-right">
+
+      <input className="input" type ="text" onChange={this.onReviewFormChange} name="user_name"
+       placeholder="UserName" />
+        <span className="icon is-small is-left">
+        <i className="fas fa-user" />
+      </span>
+      
+      <span className="icon is-small is-right">
+        <i className="fas fa-check" />
+      </span>
+    </div>
+    <p className="help is-success">This username is available</p>
+
+  </div>
+  
+  <div className="field">
+    <label htmlFor="name" className="label">Caption</label>
+      <input className="input is-success" type ="text" 
+      onChange={this.onReviewFormChange}
+       placeholder="title" name="caption"
+       />
+    </div>
+  </div>
+          
+          <div class="field">
+            <label class="label">Type of Trip</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select Trip-Type</option>
+                  <option>With Friends</option>
+                  <option>With Family</option>
+                  <option>On Business</option>
+                  <option>Traveled Solo</option>
+                  <option>Traveled as couple</option>
+
+                </select>
+              </div>
             </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Experience</label>
+            <div class="control">
+              <textarea class="textarea" onChange={this.onReviewFormChange}
+               name="experience" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+          
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-text">Cancel</button>
+            </div>
+          </div>
+            
+          </form>
+
+
+
+
+
+            
         )
     }
 }
