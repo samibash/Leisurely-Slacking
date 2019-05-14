@@ -8,6 +8,7 @@ import createReview from "./components/createReview/createReview"
 import{fetchDestination} from './services/Destination'
 import{fetchAllBars} from './services/Bars'
 import{fetchHotel} from './services/Hotels'
+import{fetchReview} from './services/Reviews'
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
@@ -15,6 +16,7 @@ import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/DestinationList/destinationList';
+import ReviewList from './components/ReviewList/ReviewList';
 
 
 class App extends Component {
@@ -27,8 +29,8 @@ class App extends Component {
        bars:[],
        reviews:[]
     }
-    this.fetchBarData=this.fetchBarData.bind(this)
-    this.fetchHotelData=this.fetchHotelData.bind(this)
+    // this.fetchBarData=this.fetchBarData.bind(this)
+    // this.fetchHotelData=this.fetchHotelData.bind(this)
 
   }
   
@@ -37,7 +39,7 @@ class App extends Component {
   this.setState({
     destinations: destinations
   })
-  console.log(destinations)
+  // console.log(destinations)
   }
 
   fetchBarData = async ()=>{
@@ -45,7 +47,7 @@ class App extends Component {
     this.setState({
       bars: bars
     })
-    console.log(bars)
+    // console.log(bars)
     }
 
   fetchHotelData = async ()=>{
@@ -53,13 +55,22 @@ class App extends Component {
       this.setState({
         hotels: hotels
       })
-      console.log(hotels)
-      }
+      // console.log(hotels)
+  }
+
+  fetchReviewData = async () => {
+      const reviews = await fetchReview()
+      this.setState({
+        reviews: reviews
+      })
+      console.log(reviews)
+  }
 
   componentDidMount(){
     this.fetchDestinationData()
     this.fetchBarData()
     this.fetchHotelData()
+    this.fetchReviewData()
   }
   render() {
     return (
@@ -71,7 +82,7 @@ class App extends Component {
             exact path='/destinations' 
             render={()=> <DestinationList  destinations={this.state.destinations}/>} 
           />  
-            <Route 
+          <Route 
             exact path='/hotels' 
             render={()=> <HotelList  hotels={this.state.hotels}/>} 
           />  
@@ -83,6 +94,11 @@ class App extends Component {
           <Route 
             exact path= '/bars'
             render={()=> <BarsList  bars={this.state.bars}/>} 
+          />   
+
+          <Route 
+            exact path= '/reviews'
+            render={()=> <ReviewList  reviews={this.state.reviews}/>} 
           />   
         </Switch>
       </div>

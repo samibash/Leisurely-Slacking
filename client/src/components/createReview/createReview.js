@@ -16,7 +16,6 @@ class CreateReview extends Component {
         const { name, value } = event.target
         this.setState({[name]: value})
         console.log(value)
-
     }
     
     onReviewFormSubmit = async (e) => {
