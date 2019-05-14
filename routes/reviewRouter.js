@@ -6,7 +6,7 @@ const reviewRouter = express.Router();
 reviewRouter.get('/reviews', async (req, res) => {
     try {
         const allreviews = await Review.findAll()
-        res.json(allreviews)
+        res.send(allreviews)
     } catch (error) {
         res.json({ msg: error.status })
     }
@@ -15,21 +15,32 @@ reviewRouter.get('/reviews', async (req, res) => {
 reviewRouter.get('/reviews/:id', async (req, res) => {
     try {
         const review = await Review.findByPk(req.params.id)
-        res.json(review)
+        res.send(review)
     } catch (error) {
         res.json({ msg: error.status })
     }
 });
 
-reviewRouter.post('/reviews', async (request, response) => {
+reviewRouter.post('/reviews', async (req, res) => {
     try {
-      const review = await Review.create(request.body)
-      response.json({
-        review
+      const createReview = await Review.create(request.body)
+      res.send({
+        createReview
       })
+      console.log( `review created`, createReview)
     } catch (e) {
-      response.status(500).json({ msg: e.message })
+      res.status(500).json({ msg: e.message })
     }
   })
+
+reviewRouter.delete('/:id', async (req, res) => {
+    try {
+      const deletion = await Review.findByPk(req.params.id);
+      await deletion.destroy();
+      res.send(deletion);
+    } catch (e) {
+      console.log(e.message);
+    }
+  });
 
 module.exports = reviewRouter
