@@ -1,91 +1,80 @@
-// import React, {Component} from 'react';
-// import {Redirect} from 'react-router-dom'
-// // import { createDestination } from '../../services/Destination';
+import React, {Component} from 'react';
+import { createReview } from '../../services/Reviews';
 
-
-
-// class CreateReview extends Component{
-//     constructor(props) {
-//       super(props)
+class CreateReview extends Component {
+    constructor(props) {
+      super(props)
     
-//       this.state = {
-//          destination:[],
-//          created:false
-//       };
-//     };
+      this.state = {
+         review:[],
+         created: false
+      };
+    };
+
+    onReviewFormChange = (event) => {
+        const user_name = event.target.value
+        const caption = event.target.value
+        const experience = event.target.value
+        const trip_type = event.target.value
+        console.log(user_name, caption, experience, trip_type);
+
+
+    }
     
-//     onDestinationFormChange = (event)=>{
-//         const element = event.target
-//         const name = element.name
-//         const value = element.value
+    onReviewFormSubmit = async (e) => {
+        e.preventDefault()
+        console.log(`Review Submitted:`, this.state)
 
-//         console.log(name,value);
+        let newReview = {
+            user_name: this.state.user_name,
+            caption: this.state.caption,
+            experience: this.state.experience,
+            trip_type: this.state.trip_type
+        }
 
-//         this.setState({
-//             [name]:value
-//         })
-//         // const newState = {}
-//         // newState[name]=value
-//         // this.setState(newState)
-//     }
-    
-//     onDestinationFormSubmit = async (e)=>{
-//         e.preventDefault()
+        console.log(newReview)
+        const review = await createReview(newReview)
+        
+        this.setState({
+            newReview: newReview,
+            created: true
+        })
+    }
 
-//         console.log(`Form Submitted:`)
-//         let newdestination = {
-//             photo:this.state.photo,
-//             description:this.state.description
-//         }
-//         console.log(newdestination)
-//         const destination = await createDestination(newdestination)
-//         this.setState({
-//             destination:destination,
-//             created:true
-//         })
-//     }
-//     render(){
-//         if(this.state.created === true){
-//             return <Redirect to="/"/>
-//         }
-//         return(
-//             <div>
-//             <form onSubmit = {this.onDestinationFormSubmit}>
-//               <label htmlFor="name">Destination Name:</label>
-//               <input id="name" 
-//               type ="text" 
-//               name="name"
-//               onChange={this.onDestinationFormChange}
-//               placeholder="location" />
-             
-            
-//             {/* <div>
-//             <label htmlFor="name">Restaurant Neighborhood</label>
-//               <input id="neighborhood" 
-//               type ="text" 
-//               name="neighborhood"
-//               onChange={this.onRestaurantFormChange}
-//               placeholder="Union Square" />
-//             </div> */}
-            
-//             <div>
-//             <label htmlFor="name">Paradise Photo</label>
-//               <input id="photo" 
-//               type ="text" 
-//               name="photo"
-//               onChange={this.onDestinationtFormChange}
-//               placeholder=" " />
-//             </div>
-//             <div>
-//                 <button type="submit">Add Review</button>
-                
-//             </div>
-//             </form>
-//             </div>
-//             )
-//     }
+    render() {
+        return (
+            <div>
+                <h1>Welcome to the Review page</h1>
+                <form onSubmit={this.onReviewFormSubmit}>
+                    <div>              
+                        <label htmlFor="name">Username:</label>
+                        <input 
+                            onChange={this.onReviewFormChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="name">Caption:</label>
+                        <input 
+                            onChange={this.onReviewFormChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="name">Experience:</label>
+                        <input 
+                            onChange={this.onReviewFormChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="name">Trip type:</label>
+                        <input 
+                            onChange={this.onReviewFormChange}
+                        />
+                    </div>
+                    <button type="submit">Add Review</button>
+                </form>
+            </div>
+        )
+    }
+}
 
-
-// }
-
-// export default CreateReview
+export default CreateReview
