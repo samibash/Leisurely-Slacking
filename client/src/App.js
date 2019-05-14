@@ -7,12 +7,14 @@ import updateReview from "./components/updateReview/updateReview"
 
 import{fetchDestination} from './services/Destination'
 import{fetchAllBars} from './services/Bars'
-import DestinationList from "./components/DestinationList/DestinationList"
+import{fetchHotel} from './services/Hotels'
+import DestinationList from "./components/DestinationList/destinationList"
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
+import HotelList from './components/HotelList/HotelList';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class App extends Component {
        reviews:[]
     }
     this.fetchBarData=this.fetchBarData.bind(this)
+    this.fetchHotelData=this.fetchHotelData.bind(this)
   }
   
   fetchDestinationData = async ()=>{
@@ -32,7 +35,7 @@ class App extends Component {
   this.setState({
     destinations: destinations
   })
-  console.log(destinations)
+  // console.log(destinations)
   }
 
   fetchBarData = async ()=>{
@@ -40,33 +43,42 @@ class App extends Component {
     this.setState({
       bars: bars
     })
-    console.log(bars)
+    // console.log(bars)
     }
 
+  fetchHotelData = async ()=>{
+    const hotels = await fetchHotel()
+    this.setState({
+      hotels:hotels
+    })
+    console.log(hotels)
+ }
   componentDidMount(){
     this.fetchDestinationData()
     this.fetchBarData()
+    this.fetchHotelData()
   }
   render() {
     return (
       <div className="App">
         <h1>YERRRRRRRR</h1>
         <Header />
-        <Switch>
+          <Switch>
           <Route 
-            exact path= '/destinations' 
+            exact path='/destinations' 
             render={()=> <DestinationList  destinations={this.state.destinations}/>} 
           />  
           
           <Route 
-            path ='/create-reviews' 
+            path='/create-reviews' 
             component={createReview} />
           
           <Route 
-            exact path= '/bars'
+            exact path='/bars'
             render={()=> <BarsList  bars={this.state.bars}/>} 
           />   
-        </Switch>
+          </Switch>
+
         {/* <main>
           <Route exact path="/" component={ Months }></Route>
           <Route path="/destinations" component={ Destination }></Route>
