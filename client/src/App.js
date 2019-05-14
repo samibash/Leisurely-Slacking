@@ -8,7 +8,7 @@ import createReview from "./components/createReview/createReview"
 import{fetchDestination} from './services/Destination'
 import{fetchAllBars} from './services/Bars'
 import{fetchHotel} from './services/Hotels'
-import DestinationList from "./components/DestinationList/destinationList"
+import DestinationList from "./components/DestinationList/DestinationList"
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
