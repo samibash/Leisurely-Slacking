@@ -34,7 +34,7 @@ class CreateReview extends Component {
 
         console.log(newReview)
         const review = await createReview(newReview)
-        
+        console.log(review)
         this.setState({
             newReview: newReview,
             created: true

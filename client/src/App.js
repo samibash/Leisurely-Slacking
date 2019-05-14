@@ -24,7 +24,8 @@ class App extends Component {
        destinations:[],
        hotels:[],
        bars:[],
-       reviews:[]
+       reviews:[],
+       
     }
     this.fetchBarData=this.fetchBarData.bind(this)
     this.fetchHotelData=this.fetchHotelData.bind(this)
