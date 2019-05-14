@@ -36,7 +36,6 @@ class updateReview extends Component {
             created: true
         })
     }
-    }
 
     render() {
         return (
