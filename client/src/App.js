@@ -29,9 +29,6 @@ class App extends Component {
        bars:[],
        reviews:[]
     }
-    // this.fetchBarData=this.fetchBarData.bind(this)
-    // this.fetchHotelData=this.fetchHotelData.bind(this)
-
   }
   
   fetchDestinationData = async ()=>{
@@ -73,7 +70,7 @@ class App extends Component {
     this.fetchReviewData()
   }
   render() {
-    console.log(this.state.hotels)
+    // console.log(this.state.hotels)
     return (
       <div className="App">
         <h1>YERRRRRRRR</h1>
