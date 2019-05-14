@@ -10,7 +10,6 @@ const CityLocation = ({destination}) => {
       <img src={destination.photo} alt ={destination.name}/>
         <p>{destination.description}</p>
       
-           
       </div>
     );
 }
