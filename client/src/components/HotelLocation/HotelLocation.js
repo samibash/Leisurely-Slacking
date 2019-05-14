@@ -9,7 +9,6 @@ class HotelLocation extends Component {
       this.state={
           showReview:false
       }
-    
   }
 
   handleClick =  () => {
@@ -19,12 +18,7 @@ class HotelLocation extends Component {
 
 
     render(){
-
     const  {hotels} = this.props
-    console.log(hotels.reviews[0].user_name)
-    
-    console.log(this.state.showReview)
-   
 
     return (
       <div className="container">
