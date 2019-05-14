@@ -8,8 +8,8 @@ const api = axios.create({
 
 export const fetchAllBars = async ()=>{
     try {
-      const resp = await api.get('/')
-    return resp.data;  
+        const resp = await api.get('/')
+        return resp.data;  
     } catch (e) {
         console.log({msg:'e',e})
     }
