@@ -57,7 +57,10 @@ class App extends Component {
             exact path='/destinations' 
             render={()=> <DestinationList  destinations={this.state.destinations}/>} 
           />  
-          
+            <Route 
+            exact path='/hotels' 
+            render={()=> <HotelList  hotels={this.state.hotels}/>} 
+          />  
           <Route 
             path='/create-reviews' 
             component={createReview} />
