@@ -8,8 +8,8 @@ const api = axios.create({
 
 export const fetchHotel = async ()=>{
     try {
-      const resp = await api.get('/')
-    return resp.data.allHotels;  
+        const resp = await api.get('/')
+        return resp.data.allHotels;  
     } catch (e) {
         console.log(e)
     }

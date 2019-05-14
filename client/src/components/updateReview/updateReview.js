@@ -6,15 +6,23 @@ class updateReview extends Component {
       super(props)
     
       this.state = {
-         review:[],
+         review: props.reviews,
          created: false
       };
     };
 
-    onReviewFormChange = (event) => {
+    onReviewFormChange = async (event) => {
         const { name, value } = event.target
         this.setState({[name]: value})
         console.log(value)
+
+
+        await this.setState(prevState => {
+            let newReview = prevState.review
+            newReview[name] = value
+            console.log('set', newReview)
+            return newReview
+        })
     }
     
     onReviewFormSubmit = async (e) => {
