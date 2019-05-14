@@ -21,7 +21,7 @@ reviewRouter.get('/reviews/:id', async (req, res) => {
     }
 });
 
-reviewRouter.post('/', async (request, response) => {
+reviewRouter.post('/reviews', async (request, response) => {
     try {
       const review = await Review.create(request.body)
       response.json({

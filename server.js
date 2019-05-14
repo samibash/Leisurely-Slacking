@@ -18,9 +18,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/destinations', destinationRouter);
-app.use('/bars', barRouter);
-app.use('/hotels', hotelRouter);
-app.use('/reviews', reviewRouter);
+app.use('/', barRouter);
+app.use('/', hotelRouter);
+app.use('/', reviewRouter);
 
 //   server below
 

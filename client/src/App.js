@@ -53,15 +53,20 @@ class App extends Component {
         <h1>YERRRRRRRR</h1>
         <Header />
         <Switch>
-      <Route exact path= '/destinations' 
-      // component={RestaurantsList} 
-      render={()=> <DestinationList  destinations={this.state.destinations}/>} />  
-       {/* <Route path ='/create-review' component={createReview} /> */}
-      <Route exact path= '/bars'
-      // component={RestaurantsList} 
-      render={()=> <BarsList  bars={this.state.bars}/>} />   
-
-    </Switch>
+          <Route 
+            exact path= '/destinations' 
+            render={()=> <DestinationList  destinations={this.state.destinations}/>} 
+          />  
+          
+          <Route 
+            path ='/create-reviews' 
+            component={createReview} />
+          
+          <Route 
+            exact path= '/bars'
+            render={()=> <BarsList  bars={this.state.bars}/>} 
+          />   
+        </Switch>
         {/* <main>
           <Route exact path="/" component={ Months }></Route>
           <Route path="/destinations" component={ Destination }></Route>

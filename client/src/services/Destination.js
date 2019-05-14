@@ -15,15 +15,15 @@ export const fetchDestination = async ()=>{
     }
 }
 
-// export const createDestination = async (data)=>{
-//     try {
-//         const resp = await api.post('/', data)
-//         console.log(resp)
-//         return resp.data.destination
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+export const createDestination = async (data)=>{
+    try {
+        const resp = await api.post('/', data)
+        console.log(resp)
+        return resp.data.destination
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // export const UpdateDestination = async (id,data)=>{
 //     try {
