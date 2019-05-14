@@ -23,7 +23,7 @@ reviewRouter.get('/reviews/:id', async (req, res) => {
 
 reviewRouter.post('/reviews', async (req, res) => {
     try {
-      const createReview = await Review.create(request.body)
+      const createReview = await Review.create(req.body)
       res.send({
         createReview
       })

@@ -12,12 +12,9 @@ class CreateReview extends Component {
     };
 
     onReviewFormChange = (event) => {
-        const user_name = event.target.value
-        const caption = event.target.value
-        const experience = event.target.value
-        const trip_type = event.target.value
-        console.log(user_name, caption, experience, trip_type);
-
+        const { name, value } = event.target
+        this.setState({[name]: value})
+        console.log(value)
 
     }
     
@@ -31,8 +28,8 @@ class CreateReview extends Component {
             experience: this.state.experience,
             trip_type: this.state.trip_type
         }
-
         console.log(newReview)
+
         const review = await createReview(newReview)
         console.log(review)
         this.setState({
@@ -50,24 +47,28 @@ class CreateReview extends Component {
                         <label htmlFor="name">Username:</label>
                         <input 
                             onChange={this.onReviewFormChange}
+                            name="user_name"
                         />
                     </div>
                     <div>
                         <label htmlFor="name">Caption:</label>
                         <input 
                             onChange={this.onReviewFormChange}
+                            name="caption"
                         />
                     </div>
                     <div>
                         <label htmlFor="name">Experience:</label>
                         <input 
                             onChange={this.onReviewFormChange}
+                            name="experience"
                         />
                     </div>
                     <div>
                         <label htmlFor="name">Trip type:</label>
                         <input 
                             onChange={this.onReviewFormChange}
+                            name="trip_type"
                         />
                     </div>
                     <button type="submit">Add Review</button>
