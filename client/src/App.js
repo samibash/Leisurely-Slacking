@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route , Switch} from 'react-router-dom'
 // import Months from './components/Home/Months'
-import createReview from "./components/createReview/createReview"
+import CreateReview from "./components/createReview/createReview"
 // import updateReview from "./components/updateReview/updateReview"
 
 import{fetchDestination} from './services/Destination'
@@ -62,6 +62,7 @@ class App extends Component {
     this.fetchHotelData()
   }
   render() {
+    console.log(this.state.hotels)
     return (
       <div className="App">
         <h1>YERRRRRRRR</h1>
@@ -77,7 +78,7 @@ class App extends Component {
           />  
           <Route 
             path='/create-reviews' 
-            component={createReview} 
+            component={CreateReview} 
             reviews={this.state.reviews} />
           
           <Route 

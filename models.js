@@ -21,6 +21,7 @@ const Hotel = db.define('hotel', {
   const Destination = db.define('destination', {
     photo: Sequelize.STRING,
     description: Sequelize.TEXT
+    
   });
 
   const Bar = db.define('bar', {
@@ -28,7 +29,9 @@ const Hotel = db.define('hotel', {
     address: Sequelize.STRING,
     zip_code: Sequelize.STRING,
     phone_number: Sequelize.STRING,
-    type:Sequelize.STRING
+    type:Sequelize.STRING,
+    longitude:Sequelize.INTEGER,
+    latitude:Sequelize.INTEGER
 
   });
   const Review = db.define('review', {
