@@ -33,7 +33,7 @@ reviewRouter.post('/reviews', async (req, res) => {
     }
   })
 
-reviewRouter.delete('/:id', async (req, res) => {
+reviewRouter.delete('/reviews/:id', async (req, res) => {
     try {
       const deletion = await Review.findByPk(req.params.id);
       await deletion.destroy();
