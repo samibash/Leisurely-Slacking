@@ -33,3 +33,12 @@ export const UpdateReview = async (id,data)=>{
         console.log(error)
     }
 }
+
+export const deleteReview = async (id)=>{
+    try {
+        const resp = await api.delete(`/${id}`)
+        return resp.data.reviews
+    } catch (error) {
+        console.log(error)
+    }
+}
