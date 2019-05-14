@@ -8,7 +8,7 @@ const CityLocation = ({destination}) => {
     return (
       <div className="RestaurantItem">
       <img src={destination.photo} alt ={destination.name}/>
-        <p>{destination.photo}</p>
+        <p>{destination.description}</p>
       
         <div>
         <Link

@@ -15,21 +15,21 @@ export const fetchHotel = async ()=>{
     }
 }
 
-export const createHotel = async (data)=>{
-    try {
-        const resp = await api.post('/', data)
-        console.log(resp)
-        return resp.data.hotel
-    } catch (error) {
-        console.log(error)
-    }
-}
+// export const createHotel = async (data)=>{
+//     try {
+//         const resp = await api.post('/', data)
+//         console.log(resp)
+//         return resp.data.hotel
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-export const UpdateHotel = async (id,data)=>{
-    try {
-       const resp = await api.put( `/ ${id}`, data)
-       return resp.data.hotel
-    } catch (error) {
-        console.log(error)
-    }
-}
+// export const UpdateHotel = async (id,data)=>{
+//     try {
+//        const resp = await api.put( `/ ${id}`, data)
+//        return resp.data.hotel
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }

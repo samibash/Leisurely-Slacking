@@ -7,7 +7,7 @@ import updateReview from "./components/updateReview/updateReview"
 
 
 import{fetchDestination} from './services/Destination'
-import destinationList from "./components/destinationList/destinationList"
+import DestinationList from "./components/DestinationList/DestinationList"
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
@@ -39,13 +39,13 @@ class App extends Component {
         <h1>YERRRRRRRR</h1>
         <Header />
         <Switch>
-      <Route exact path= '/' 
+      <Route exact path= '/destinations' 
       // component={RestaurantsList} 
-      render={()=> <destinationList  restaurants={this.state.destinations}/>} />  
-      <Route path ='/create-review' component={createReview} />
+      render={()=> <DestinationList  destinations={this.state.destinations}/>} />  
+      {/* <Route path ='/create-review' component={createReview} />
       <Route exact path= '/update-review'
       // component={RestaurantsList} 
-      render={()=> <updateReview  restaurants={this.state.destinations}/>} />  
+      render={()=> <updateReview  destinations={this.state.destinations}/>} />   */}
 
     </Switch>
         {/* <main>

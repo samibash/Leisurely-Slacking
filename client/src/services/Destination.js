@@ -9,27 +9,27 @@ const api = axios.create({
 export const fetchDestination = async ()=>{
     try {
       const resp = await api.get('/')
-    return resp.data.destinations;  
+    return resp.data.Destinations;  
     } catch (e) {
         console.log(e)
     }
 }
 
-export const createDestination = async (data)=>{
-    try {
-        const resp = await api.post('/', data)
-        console.log(resp)
-        return resp.data.destination
-    } catch (error) {
-        console.log(error)
-    }
-}
+// export const createDestination = async (data)=>{
+//     try {
+//         const resp = await api.post('/', data)
+//         console.log(resp)
+//         return resp.data.destination
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-export const UpdateDestination = async (id,data)=>{
-    try {
-       const resp = await api.put( `/ ${id}`, data)
-       return resp.data.destination
-    } catch (error) {
-        console.log(error)
-    }
-}
+// export const UpdateDestination = async (id,data)=>{
+//     try {
+//        const resp = await api.put( `/ ${id}`, data)
+//        return resp.data.destination
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
