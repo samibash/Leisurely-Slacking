@@ -5,21 +5,26 @@ import Months from './components/Home/Months'
 import createReview from "./components/createReview/createReview"
 import updateReview from "./components/updateReview/updateReview"
 
-
 import{fetchDestination} from './services/Destination'
+import{fetchAllBars} from './services/Bars'
 import DestinationList from "./components/DestinationList/DestinationList"
 
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
 import Header from './components/Header/Header'
+import BarsList from './components/BarsList/BarsList';
 
 class App extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-       destinations:[]
+       destinations:[],
+       hotels:[],
+       bars:[],
+       reviews:[]
     }
+    this.fetchBarData=this.fetchBarData.bind(this)
   }
   
   fetchDestinationData = async ()=>{
@@ -30,8 +35,17 @@ class App extends Component {
   console.log(destinations)
   }
 
+  fetchBarData = async ()=>{
+    const bars =  await fetchAllBars()
+    this.setState({
+      bars: bars
+    })
+    console.log(bars)
+    }
+
   componentDidMount(){
     this.fetchDestinationData()
+    this.fetchBarData()
   }
   render() {
     return (
@@ -42,10 +56,10 @@ class App extends Component {
       <Route exact path= '/destinations' 
       // component={RestaurantsList} 
       render={()=> <DestinationList  destinations={this.state.destinations}/>} />  
-      {/* <Route path ='/create-review' component={createReview} />
-      <Route exact path= '/update-review'
+       {/* <Route path ='/create-review' component={createReview} /> */}
+      <Route exact path= '/bars'
       // component={RestaurantsList} 
-      render={()=> <updateReview  destinations={this.state.destinations}/>} />   */}
+      render={()=> <BarsList  bars={this.state.bars}/>} />   
 
     </Switch>
         {/* <main>

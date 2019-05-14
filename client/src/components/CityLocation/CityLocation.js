@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+
 
 const CityLocation = ({destination}) => {
 
@@ -10,9 +10,7 @@ const CityLocation = ({destination}) => {
       <img src={destination.photo} alt ={destination.name}/>
         <p>{destination.description}</p>
       
-        <div>
-        <Link
-            to={`/update-restaurant/${destination.id}`}>Edit Destination</Link>        </div>
+           
       </div>
     );
 }
