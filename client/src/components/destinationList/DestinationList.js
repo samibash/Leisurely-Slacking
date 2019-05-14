@@ -15,4 +15,5 @@ const DestinationList = ({destinations}) => {
     )
 }
 
+
 export default DestinationList
