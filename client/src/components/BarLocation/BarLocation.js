@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+
+
+
 const BarLocation = ({ bars }) => {
 
     return (
@@ -12,7 +15,12 @@ const BarLocation = ({ bars }) => {
           <div>
             <Link to={`/update-bar/${bars.id}`}>Edit Bars</Link>        
           </div>
-      </div>
+
+
+          <div>
+        </div>
+        </div>
+     
     );
 }
 

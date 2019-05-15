@@ -1,11 +1,10 @@
 import React from 'react'
 import './Home.css'
-
 function Months() {
     return (
         <div>
             <h1>This is the Landing page</h1>
-            <div id="calendar">
+            {/* <div id="calendar">
                 <div className="month">January</div>
                 <div className="month">February</div>
                 <div className="month">March</div>
@@ -20,7 +19,8 @@ function Months() {
                 <div className="month">October</div>
                 <div className="month">November</div>
                 <div className="month">December</div>
-            </div>
+            </div> */}
+           
         </div>
     )
 }
