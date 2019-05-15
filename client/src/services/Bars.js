@@ -3,7 +3,7 @@ import axios from 'axios'
 const URL = 'http://localhost:3005';
 
 const api = axios.create({
-    baseURL:   `${URL}/bars`
+    baseURL: `${URL}/bars`
 })
 
 export const fetchAllBars = async ()=>{
