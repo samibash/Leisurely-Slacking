@@ -92,10 +92,10 @@ class CreateReview extends Component {
                 
                   <option >Select Trip-Type</option>
                   <option value="With Friends">With Friends</option>
-                  <option>With Family</option>
-                  <option>On Business</option>
-                  <option>Traveled Solo</option>
-                  <option>Traveled as couple</option>
+                  <option value="With Family">With Family</option>
+                  <option value="On Business">On Business</option>
+                  <option value="Traveled Solo">Traveled Solo</option>
+                  <option value="Traveled as Couple">Traveled as Couple</option>
 
                 </select>
               </div>
