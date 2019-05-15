@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import updateReview from '../../services/Reviews';
+import { updateReview } from '../../services/Reviews';
 
 class UpdateReview extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-            review: props.reviews,
+            review: props.review,
             created: false
         }
     }
 
     onReviewFormChange = async (event) => {
         const { name, value } = event.target
-        this.setState({[name]: value})
+        this.setState({ [name]: value })
         console.log(value)
             await this.setState(prevState => {
             let newReview = prevState.reviews
-            newReview[name] = value
+            // newReview[name] = value
             console.log('set', newReview)
-            return newReview
+            console.log(this.state.review)
+            // return newReview
         })
     }
 
@@ -27,14 +28,14 @@ class UpdateReview extends Component {
         e.preventDefault()
         console.log(`Review Updated:`, this.state)
 
-        let updateReview = {
+        let reviewUpdate = {
             user_name: this.state.user_name,
             caption: this.state.caption,
             experience: this.state.experience,
             trip_type: this.state.trip_type
         }
-        console.log(updateReview)
-        const review = await updateReview(updateReview)
+        console.log(reviewUpdate)
+        const review = await updateReview(reviewUpdate)
         console.log(review)
         this.setState({
             review: updateReview,
@@ -46,7 +47,7 @@ class UpdateReview extends Component {
         return (
             <div>
                 <h1>Welcome to the Review page</h1>
-                <form update={this.onReviewFormSubmit}>
+                <form>
                     <div>              
                         <label htmlFor="name">Username:</label>
                         <input 
@@ -71,14 +72,30 @@ class UpdateReview extends Component {
                         />
                     </div> 
 
-                    <div>
+                    <div className="field">
+                        <label className="label">Type of Trip</label>
+                        <div className="control">
+                            <div className="select">
+                                <select>
+                                    <option>Select Trip-Type</option>
+                                    <option>With Friends</option>
+                                    <option>With Family</option>
+                                    <option>On Business</option>
+                                    <option>Traveled Solo</option>
+                                    <option>Traveled as couple</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div>
                         <label htmlFor="name">Trip type:</label>
                         <input 
                             onChange={this.onReviewFormChange}
                             name="trip_type"
                         />
-                    </div> 
-                    <button type="submit">Add Review</button>
+                    </div>  */}
+                    <button onClick={this.onReviewFormSubmit} type="submit">Add Review</button>
                 </form>
             </div>
         )

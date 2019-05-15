@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
 import CreateReview from '../createReview/createReview'
 import HotelList from '../HotelList/HotelList';
 import './HotelLocation.css'
@@ -16,8 +15,7 @@ class HotelLocation extends Component {
     this.setState({showReview:true})
   }
 
-
-    render(){
+  render(){
     const  {hotels} = this.props
 
     return (
@@ -40,7 +38,7 @@ class HotelLocation extends Component {
       <article className="media">
   <figure className="media-left">
     <p className="image is-64x64">
-      <img src="https://bulma.io/images/placeholders/128x128.png" />
+      <img src="https://bulma.io/images/placeholders/128x128.png" alt="nothing"/>
     </p>
   </figure>
   <div className="media-content">

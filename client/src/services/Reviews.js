@@ -28,7 +28,7 @@ export const createReview = async (data) => {
 export const updateReview = async (id, data)=>{
     try {
         const resp = await api.put(`/${id}`, data)
-        return resp.data.reviews
+        return resp.data
     } catch (error) {
         console.log(error)
     }
