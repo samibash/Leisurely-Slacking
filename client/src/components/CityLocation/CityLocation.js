@@ -1,13 +1,10 @@
 import React from 'react';
 
-
-const CityLocation = ({destination}) => {
-
-    console.log(destination)
+const CityLocation = ({ destination }) => {
 
     return (
       
-      <div className="RestaurantItem">
+      <div className="DestinationItem">
       <img src={destination.photo} alt ={destination.name}/>
         <p>{destination.description}</p>
       

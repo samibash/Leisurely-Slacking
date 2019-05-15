@@ -1,14 +1,14 @@
 import React from 'react';
+import ShowReview from '../ShowReview/ShowReview';
 
 const ReviewList = ({ reviews }) => {
-    // const reviewData = reviews && reviews.map((reviews, index) => {
-    //     return <ReviewList key={index} reviews={reviews} />
-    // })
-    // console.log(reviews)
+    const reviewData = reviews && reviews[0]
+    ? reviews.map((reviews, index) => {
+        return <ShowReview key={ index } reviews={ reviews }/>}) : null
 
     return (
         <div>
-           {/* <h1>{reviewData}</h1> */}
+           <h1>{reviewData}</h1>
         </div>
     )
 }

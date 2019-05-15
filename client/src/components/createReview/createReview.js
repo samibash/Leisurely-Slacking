@@ -112,13 +112,7 @@ class CreateReview extends Component {
             </div>
           </div>
             
-          </form>
-
-
-
-
-
-            
+          </form>       
         )
     }
 }

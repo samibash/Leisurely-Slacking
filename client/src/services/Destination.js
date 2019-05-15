@@ -3,13 +3,13 @@ import axios from 'axios'
 const URL = 'http://localhost:3005';
 
 const api = axios.create({
-    baseURL:   `${URL}/destinations`
+    baseURL: `${URL}/destinations`
 })
 
-export const fetchDestination = async ()=>{
+export const fetchDestination = async () => {
     try {
-      const resp = await api.get('/')
-    return resp.data.Destinations;  
+        const resp = await api.get('/')
+        return resp.data.destinations;  
     } catch (e) {
         console.log(e)
     }

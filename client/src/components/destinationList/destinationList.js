@@ -2,8 +2,7 @@ import React from 'react';
 import CityLocation from '../CityLocation/CityLocation'
 
 
-const DestinationList = ({destinations}) => {
-  
+const DestinationList = ({ destinations }) => {
     const data = destinations && destinations.map((destination,index) => {
         return <CityLocation key={index} destination={destination}/>
     })
