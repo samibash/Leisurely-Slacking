@@ -25,7 +25,7 @@ export const createReview = async (data) => {
     }
 }
 
-export const UpdateReview = async (id, data)=>{
+export const updateReview = async (id, data)=>{
     try {
         const resp = await api.put(`/${id}`, data)
         return resp.data.reviews

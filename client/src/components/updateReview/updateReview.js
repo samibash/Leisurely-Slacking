@@ -1,30 +1,28 @@
-import React, {Component} from 'react';
-import { UpdateReview } from '../../services/Reviews';
+import React, { Component } from 'react';
+import updateReview from '../../services/Reviews';
 
-class updateReview extends Component {
+class UpdateReview extends Component {
     constructor(props) {
-      super(props)
+        super(props)
     
-      this.state = {
-         review: props.reviews,
-         created: false
-      };
-    };
+        this.state = {
+            review: props.reviews,
+            created: false
+        }
+    }
 
     onReviewFormChange = async (event) => {
         const { name, value } = event.target
         this.setState({[name]: value})
         console.log(value)
-
-
-        await this.setState(prevState => {
-            let newReview = prevState.review
+            await this.setState(prevState => {
+            let newReview = prevState.reviews
             newReview[name] = value
             console.log('set', newReview)
             return newReview
         })
     }
-    
+
     onReviewFormSubmit = async (e) => {
         e.preventDefault()
         console.log(`Review Updated:`, this.state)
@@ -36,8 +34,7 @@ class updateReview extends Component {
             trip_type: this.state.trip_type
         }
         console.log(updateReview)
-
-        const review = await UpdateReview(updateReview)
+        const review = await updateReview(updateReview)
         console.log(review)
         this.setState({
             review: updateReview,
@@ -49,7 +46,7 @@ class updateReview extends Component {
         return (
             <div>
                 <h1>Welcome to the Review page</h1>
-                <form onSubmit={this.onReviewFormSubmit}>
+                <form update={this.onReviewFormSubmit}>
                     <div>              
                         <label htmlFor="name">Username:</label>
                         <input 
@@ -57,6 +54,7 @@ class updateReview extends Component {
                             name="user_name"
                         />
                     </div>
+
                     <div>
                         <label htmlFor="name">Caption:</label>
                         <input 
@@ -64,20 +62,22 @@ class updateReview extends Component {
                             name="caption"
                         />
                     </div>
+
                     <div>
                         <label htmlFor="name">Experience:</label>
                         <input 
                             onChange={this.onReviewFormChange}
                             name="experience"
                         />
-                    </div>
+                    </div> 
+
                     <div>
                         <label htmlFor="name">Trip type:</label>
                         <input 
                             onChange={this.onReviewFormChange}
                             name="trip_type"
                         />
-                    </div>
+                    </div> 
                     <button type="submit">Add Review</button>
                 </form>
             </div>
@@ -85,4 +85,4 @@ class updateReview extends Component {
     }
 }
 
-export default updateReview
+export default UpdateReview

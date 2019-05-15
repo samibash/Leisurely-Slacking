@@ -1,5 +1,6 @@
 import React from 'react';
 import ShowReview from '../ShowReview/ShowReview';
+import UpdateReview from '../UpdateReview/UpdateReview'
 
 const ReviewList = ({ reviews }) => {
     const reviewData = reviews && reviews[0]
@@ -8,7 +9,8 @@ const ReviewList = ({ reviews }) => {
 
     return (
         <div>
-           <h1>{reviewData}</h1>
+            <UpdateReview />
+            <h1>{reviewData}</h1>
         </div>
     )
 }
