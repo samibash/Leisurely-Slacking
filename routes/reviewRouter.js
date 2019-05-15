@@ -5,8 +5,8 @@ const reviewRouter = express.Router();
   
 reviewRouter.get('/reviews', async (req, res) => {
     try {
-        const allreviews = await Review.findAll()
-        res.send(allreviews)
+        const reviews = await Review.findAll()
+        res.send(reviews)
     } catch (error) {
         res.json({ msg: error.status })
     }

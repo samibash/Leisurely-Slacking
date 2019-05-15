@@ -4,16 +4,12 @@ const destinationRouter = express.Router();
 
 
   
-destinationRouter.get('/', async (request, response) =>
-{
-
+destinationRouter.get('/', async (request, response) => {
   try {
-    const Destinations = await Destination.findAll({
+    const destinations = await Destination.findAll({
       include: [ Review ]
     });
-    response.json({
-      Destinations
-    })
+    response.json({destinations})
   } catch (e) {
     response.status(500).json({ msg: e.message })
   }

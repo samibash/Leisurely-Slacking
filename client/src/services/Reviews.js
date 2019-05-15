@@ -6,10 +6,10 @@ const api = axios.create({
     baseURL: `${URL}/reviews`
 })
 
-export const fetchReview = async ()=>{
+export const fetchReview = async () => {
     try {
         const resp = await api.get('/')
-        return resp.data.reviews 
+        return resp.data
     } catch (e) {
         console.log(e)
     }
@@ -25,7 +25,7 @@ export const createReview = async (data) => {
     }
 }
 
-export const UpdateReview = async (id,data)=>{
+export const UpdateReview = async (id, data)=>{
     try {
         const resp = await api.put(`/${id}`, data)
         return resp.data.reviews
