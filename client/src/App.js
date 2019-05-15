@@ -15,6 +15,7 @@ import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/destinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
+import Map from './components/Map/Map';
 
 class App extends Component {
   constructor(props) {
@@ -93,6 +94,11 @@ class App extends Component {
             exact path='/reviews'
             render={() => <ReviewList reviews={this.state.reviews}/>} 
           />   
+
+          <Route 
+            exact path='/'
+            render={() =>  <Map  bars={this.state.bars} component={Map}/>} 
+          />  
         </Switch>
       </div>
     );

@@ -30,8 +30,8 @@ const Hotel = db.define('hotel', {
     zip_code: Sequelize.STRING,
     phone_number: Sequelize.STRING,
     type:Sequelize.STRING,
-    longitude:Sequelize.INTEGER,
-    latitude:Sequelize.INTEGER
+    longitude:Sequelize.STRING,
+    latitude:Sequelize.STRING,
 
   });
   const Review = db.define('review', {

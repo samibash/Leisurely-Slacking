@@ -8,7 +8,8 @@ class CreateReview extends Component {
     
       this.state = {
          review: props.reviews,
-         created: false
+         created: false,
+         trip_type:""
       };
     };
 
@@ -37,16 +38,21 @@ class CreateReview extends Component {
             created: true
         })
     }
+    onDropDown = async (e) =>{
+      e.preventDefault()
+      const { dropdown, value } = e.target
+      this.setState({[dropdown]: value})
+    }
 
     render() {
-      if(this.state.created === true){
-        return <Redirect to="/reviews"/>
-      }
-      
-      return (
-        <form className="datForm" onSubmit={this.onReviewFormSubmit}>
-        <h1>Give Us Your Review</h1>
-        <button>UPDATE</button>
+        if(this.state.created === true){
+            return <Redirect to="/reviews"/>
+        }
+        return (
+        
+                
+     <form className="datForm" onSubmit={this.onReviewFormSubmit}>
+                 <h1>Give Us Your Review</h1>
 
         <div className="field">
           <label htmlFor="name" className="label">Username</label>
@@ -78,10 +84,11 @@ class CreateReview extends Component {
   </div>
           
           <div className="field">
-            <label className="label">Type of Trip</label>
+            <label className="label" htmlFor="dropdown">Type of Trip</label>
             <div className="control">
               <div className="select">
-                <select>
+                <select value={this.state.trip_type}  onChange={(e) => this.setState({type_trip: e.target.value})}>
+                
                   <option>Select Trip-Type</option>
                   <option>With Friends</option>
                   <option>With Family</option>
