@@ -53,7 +53,8 @@ class CreateReview extends Component {
     <div className="control">
     <div className="control has-icons-left has-icons-right">
 
-      <input className="input" type ="text" onChange={this.onReviewFormChange} name="user_name"
+      <input className="input" type ="text" onChange={this.onReviewFormChange} 
+      name="user_name"
        placeholder="UserName" />
         <span className="icon is-small is-left">
         <i className="fas fa-user" />
@@ -76,10 +77,10 @@ class CreateReview extends Component {
     </div>
   </div>
           
-          <div class="field">
-            <label class="label">Type of Trip</label>
-            <div class="control">
-              <div class="select">
+          <div className="field">
+            <label className="label">Type of Trip</label>
+            <div className="control">
+              <div className="select">
                 <select>
                   <option>Select Trip-Type</option>
                   <option>With Friends</option>
@@ -93,21 +94,21 @@ class CreateReview extends Component {
             </div>
           </div>
           
-          <div class="field">
-            <label class="label">Experience</label>
-            <div class="control">
-              <textarea class="textarea" onChange={this.onReviewFormChange}
+          <div className="field">
+            <label className="label">Experience</label>
+            <div className="control">
+              <textarea className="textarea" onChange={this.onReviewFormChange}
                name="experience" placeholder="Textarea"></textarea>
             </div>
           </div>
           
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
+          <div className="field is-grouped">
+            <div className="control">
+              <button className="button is-link">Submit</button>
             </div>
-            <div class="control">
-              <button class="button is-text">Cancel</button>
+            <div className="control">
+              <button className="button is-text">Cancel</button>
             </div>
           </div>
             

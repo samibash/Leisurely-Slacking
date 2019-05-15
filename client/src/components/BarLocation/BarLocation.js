@@ -1,22 +1,22 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-
-const BarLocation = ({bars}) => {
+import BarLocation from '../BarLocation/BarLocation'
 
 
-    return (
-      <div className="BarItem">
-     <h2>{bars.name}</h2>
-        <li>{bars.address}</li>
-        <li>{bars.zip_code}</li>
-        <li>{bars.phone_number}</li>
-        <li>{bars.type}</li>
-        <div>
-        <Link
-            to={`/update-bar/${bars.id}`}>Edit Bars</Link>        
-            </div>
-      </div>
-    );
+const BarsList = ({bars}) => {
+    const renderData = bars && bars[0].address
+    ? bars.map((bars,index)=>{
+        return <BarLocation key={index} bars={bars}/>})
+        : null
+    // const barData = bars && bars.map((bars,index)=>{
+    //     return <BarLocation key={index} bars={bars}/>
+    // })
+        
+    return(
+         <div className="DestinationList">
+             <h1>{renderData}</h1>
+            
+         </div>
+    )
 }
 
-export default BarLocation;
+export default BarsList

@@ -60,7 +60,6 @@ class App extends Component {
       this.setState({
         reviews: reviews
       })
-      console.log(reviews)
   }
 
   componentDidMount(){

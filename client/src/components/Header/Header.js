@@ -47,8 +47,8 @@ export default class Header extends Component {
                     <Link to={'/destinations'}>Destinations</Link>
                     <Link to={'/hotels'}>Hotels</Link>
                     <Link to={'/bars'}>Bars</Link>
-                    <Link to={'/create-reviews'}>Reviews</Link>
-                    <Link to={'/reviews'}>Reviews</Link>
+                    {/* <Link to={'/create-reviews'}>Reviews</Link>
+                    <Link to={'/reviews'}>Reviews</Link> */}
                 </nav>
             </header> 
         )
