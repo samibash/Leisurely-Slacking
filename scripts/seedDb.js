@@ -200,126 +200,162 @@ const bar01 =  await Bar.create({
     address:'148 Calle San Sebastián',
     zip_code:'00901',
     phone_number:'1-787-412-4251',
-    type:'casual'
+    type:'casual',
+    longitude: "18.467194",
+    latitude: "-66.117472"
 })
 const bar02 =await Bar.create({
     name: 'El Quinqué Bar',
     address:'114 Calle San Sebastián',
     zip_code:'00901',
     phone_number:'1-787-344-3859',
-    type:'cozy'
+    type:'cozy',
+    longitude: "18.467222",
+    latitude: "-66.117750"
 })
 const bar03 = await Bar.create({
     name: '1608 Bar à vin & fromage',
     address:'Fairmont Le Château Frontenac',
     zip_code:'G1R 5J5',
     phone_number:'1-418-692-3861',
-    type:'groups'
+    type:'groups',
+    longitude: "46.811971",
+    latitude: "-71.204978"
 })
 const bar04 = await Bar.create({
     name: 'Pub St-Patrick',
     address:'1200 Rue Saint-Jean',
     zip_code:'G1R 1S8',
     phone_number:' 1-418-694-0618',
-    type:'irish pub'
+    type:'irish pub',
+    longitude: "18.432386",
+    latitude: "-66.058523"
 })
 const bar05 = await Bar.create({
     name: 'Luce',
     address:'Hilton Trinidad and Conference Center Lady Young Road',
     zip_code:'Trinidad Trinidad',
     phone_number:'1-868-285-5823',
-    type:'cozy'
+    type:'cozy',
+    longitude: "10.671950",
+    latitude: "-61.508808"
 })
 const bar06 = await Bar.create({
     name: 'Trotters',
     address:'Maraval Road',
     zip_code:'Port of Spain',
     phone_number:'1-868-627-8768',
-    type:'sports bar'
+    type:'sports bar',
+    longitude: "10.667803",
+    latitude: "-61.518813"
 })
 const bar07 = await Bar.create({
     name: `Vernon's Speakeasy`,
     address:'6855 4th St NW, Albuquerque',
     zip_code:'87107',
     phone_number:'505-341-0831',
-    type:'steak house'
+    type:'steak house',
+    longitude: "35.160553",
+    latitude: "-106.637626"
 })
 const bar08 = await Bar.create({
     name: 'Left Turn Distilling',
     address:'2924 Girard Blvd NE',
     zip_code:'87107',
     phone_number:'1-787-412-4251',
-    type:'bar'
+    type:'bar',
+    longitude: "35.115698",
+    latitude: "-106.613228"
 })
 const bar09 = await Bar.create({
     name: 'Arundel Wharf - Seafood - Cocktail Bar - Craft Beer - Wine Bar - Lobster Rolls',
     address:'43 Ocean Ave',
     zip_code:'04046',
     phone_number:'207-967-3444',
-    type:'seafood restaurant'
+    type:'seafood restaurant',
+    longitude: "43.359082",
+    latitude: "-70.476028"
 })
 const bar10 = await Bar.create({
     name: 'Bandaloop',
     address:'Cross St',
     zip_code:' 04046',
     phone_number:'207-967-4994',
-    type:'organic restaurant'
+    type:'organic restaurant',
+    longitude: "43.361605",
+    latitude: "-70.476326"
 })
 const bar11 = await Bar.create({
     name: 'Snc Mbl',
     address:'10 Quai Félix Faure',
     zip_code:'14520 Port-en-Bessin-Huppain',
     phone_number:'33-2-31-21-70-44',
-    type:'bar'
+    type:'bar',
+    longitude: "49.348040",
+    latitude: "-0.755475"
 })
 const bar12 = await Bar.create({
     name: 'La Rotonde',
     address:'11 Rue de Bayeux',
     zip_code:'14520 Port-en-Bessin-Huppain',
     phone_number:' 33-2-31-21-72-25',
-    type:'bar'
+    type:'bar',
+    longitude: "49.346457",
+    latitude: "-0.754892"
 })
 const bar13 = await Bar.create({
     name: 'Florería Atlántico',
     address:'Arroyo 872',
     zip_code:'Buenos Aires',
     phone_number:'54-11-4313-6093',
-    type:'chic'
+    type:'chic',
+    longitude: "-34.591567",
+    latitude: "-58.379553"
 })
 const bar14 = await Bar.create({
     name: 'Bar 878',
     address:'Thames 878',
     zip_code:'Buenos Aires',
     phone_number:'54-11-4773-1098',
-    type:'bar'
+    type:'bar',
+    longitude: "-34.592877",
+    latitude: "-58.439057"
 })
 const bar15 = await Bar.create({
     name: 'The Blind Rabbit',
     address:'440 S Anaheim Blvd',
     zip_code:'92805',
     phone_number:'not listed',
-    type:'casual'
+    type:'casual',
+    longitude: "33.831506",
+    latitude: "-117.911978"
 })
 const bar16 = await Bar.create({
     name: 'Trader Sam’s Enchanted Tiki Bar',
     address:'1150 Magic Way',
     zip_code:'92802',
     phone_number:'714-781-3463',
-    type:'tiki bar'
+    type:'tiki bar',
+    longitude: "33.808262",
+    latitude: "-117.926602"
 })
 const bar17 = await Bar.create({
     name: 'Lumni - Restaurante & Bar',
     address:' R. de São Pedro de Alcântara 35',
     zip_code:' 1250-237',
     phone_number:'351-21-116-0210',
-    type:'restaurant'
+    type:'restaurant',
+    longitude: "38.713970",
+    latitude: "-9.144050"
 })
 const bar18 = await Bar.create({
     name: 'Alto do Bairro - Tapas Bar',
     address:'Tv. da Boa Hora N 39',
     zip_code:'1200-063',
     phone_number:'351-961-499-060',
-    type:'tapas restaurant'
+    type:'tapas restaurant',
+    longitude: "38.713781",
+    latitude: "-9.144969"
 })
 
 const bar19 =await Bar.create({
@@ -327,28 +363,36 @@ const bar19 =await Bar.create({
     address:'Calea Victoriei 91',
     zip_code:'010091',
     phone_number:'40 770 550 234',
-    type:'bar'
+    type:'bar',
+    longitude: "44.443014",
+    latitude: "26.093230"
 })
 const bar20 = await Bar.create({
     name: `Caru' cu Bere`,
     address:'Strada Stavropoleos 5',
     zip_code:'030081',
     phone_number:'40 726 282 373',
-    type:'romanian restaurant'
+    type:'romanian restaurant',
+    longitude: "44.432068",
+    latitude: "26.098131"
 })
 const bar21 = await Bar.create({
     name: 'Beereau',
     address:' Claire-Waldoff-Straße 4',
     zip_code:'10117',
     phone_number:'49 30 31176081',
-    type:'bar'
+    type:'bar',
+    longitude: "52.524971",
+    latitude: "13.386741"
 })
 const bar22 = await Bar.create({
     name: 'Vincent Piano Bar',
     address:'Schiffbauerdamm 6/7',
     zip_code:'10117',
     phone_number:'49 30 27582305',
-    type:'cocktail bar'
+    type:'cocktail bar',
+    longitude: "52.521583",
+    latitude: "13.385889"
 })
 const bar23 = await Bar.create({
     name: `Claridge's Bar`,
@@ -356,7 +400,9 @@ const bar23 = await Bar.create({
     address:`Claridge's, Brook St, Mayfai`,
     zip_code:'W1K 4HR, ',
     phone_number:'44 20 7629 8860',
-    type:'casual'
+    type:'casual',
+    longitude: "51.512475",
+    latitude: "-0.147886"
 })
 const bar24 = await Bar.create({
     name: 'Wine Unearthed - London Wine Tasting',
@@ -364,7 +410,9 @@ const bar24 = await Bar.create({
     address:'Finos Wine Cellar, 123 Mount St, Mayfair148 Calle San Sebastián',
     zip_code:'W1K 3NP',
     phone_number:'44 345 299 8652',
-    type:'wine bar'
+    type:'wine bar',
+    longitude: "51.510092",
+    latitude: "-0.148312"
 })
   //  Set the relationship between the  bar hotel, review and destination
 //   Destination.hasMany(Hotel); 
