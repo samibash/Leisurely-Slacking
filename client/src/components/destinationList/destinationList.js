@@ -9,7 +9,13 @@ const DestinationList = ({ destinations }) => {
    
     return(
         <div className="DestinationList">
-            <h1>{data}</h1>
+                <section className="section">
+                    <div className="columns">
+                        <div className="column">
+                            {data}
+                        </div>
+                    </div>
+                </section>
         </div>
     )
 }
