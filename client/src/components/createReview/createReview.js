@@ -39,26 +39,26 @@ class CreateReview extends Component {
     }
 
     render() {
-        if(this.state.created === true){
-            return <Redirect to="/"/>
-        }
-        return (
-        
-                
-     <form className="datForm" onSubmit={this.onReviewFormSubmit}>
-                 <h1>Give Us Your Review</h1>
+      if(this.state.created === true){
+        return <Redirect to="/reviews"/>
+      }
+      
+      return (
+        <form className="datForm" onSubmit={this.onReviewFormSubmit}>
+        <h1>Give Us Your Review</h1>
+        <button>UPDATE</button>
 
-  <div className="field">
-    <label htmlFor="name" className="label">Username</label>
-    <div className="control">
-    <div className="control has-icons-left has-icons-right">
+        <div className="field">
+          <label htmlFor="name" className="label">Username</label>
+          <div className="control">
+          <div className="control has-icons-left has-icons-right">
 
-      <input className="input" type ="text" onChange={this.onReviewFormChange} 
-      name="user_name"
-       placeholder="UserName" />
-        <span className="icon is-small is-left">
-        <i className="fas fa-user" />
-      </span>
+          <input className="input" type ="text" onChange={this.onReviewFormChange} 
+          name="user_name"
+          placeholder="UserName" />
+            <span className="icon is-small is-left">
+            <i className="fas fa-user" />
+          </span>
       
       <span className="icon is-small is-right">
         <i className="fas fa-check" />

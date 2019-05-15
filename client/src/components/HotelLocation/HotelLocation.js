@@ -13,7 +13,6 @@ class HotelLocation extends Component {
   }
 
   handleClick =  () => {
-    
     this.setState({showReview:true})
   }
 
