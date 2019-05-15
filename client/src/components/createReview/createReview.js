@@ -53,7 +53,8 @@ class CreateReview extends Component {
     <div className="control">
     <div className="control has-icons-left has-icons-right">
 
-      <input className="input" type ="text" onChange={this.onReviewFormChange} name="user_name"
+      <input className="input" type ="text" onChange={this.onReviewFormChange} 
+      name="user_name"
        placeholder="UserName" />
         <span className="icon is-small is-left">
         <i className="fas fa-user" />

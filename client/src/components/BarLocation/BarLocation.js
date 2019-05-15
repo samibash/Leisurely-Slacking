@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import BarLocation from '../BarLocation/BarLocation'
 
 const BarLocation = ({ bars }) => {
 
@@ -17,4 +17,4 @@ const BarLocation = ({ bars }) => {
     );
 }
 
-export default BarLocation;
+export default BarsList

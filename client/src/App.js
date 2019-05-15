@@ -54,8 +54,6 @@ class App extends Component {
       this.setState({
         reviews: reviews
       })
-    console.log(reviews)
-    // Go back to Reviews.js because you may have to make changes
   }
 
   componentDidMount() {
