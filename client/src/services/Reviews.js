@@ -18,8 +18,8 @@ export const fetchReview = async () => {
 export const createReview = async (data) => {
     try {
         const resp = await api.post('/', data)
-        console.log(resp)
-        return resp.data.review
+        console.log(resp.data)
+        return resp.data
     } catch (error) {
         console.log(error)
     }
@@ -37,7 +37,7 @@ export const updateReview = async (id, data)=>{
 export const deleteReview = async (id)=>{
     try {
         const resp = await api.delete(`/${id}`)
-        return resp.data.reviews
+        return resp.data
     } catch (error) {
         console.log(error)
     }

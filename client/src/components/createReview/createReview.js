@@ -7,9 +7,8 @@ class CreateReview extends Component {
       super(props)
     
       this.state = {
-         review: props.reviews,
-         created: false,
-         trip_type:""
+         review: [],
+         created: false
       };
     };
 
@@ -24,6 +23,7 @@ class CreateReview extends Component {
         console.log(`Review Submitted:`, this.state)
 
         let newReview = {
+
             user_name: this.state.user_name,
             caption: this.state.caption,
             experience: this.state.experience,
@@ -36,24 +36,18 @@ class CreateReview extends Component {
         this.setState({
             review: review,
             created: true
-        })
-    }
-    onDropDown = async (e) =>{
-      e.preventDefault()
-      // console.log(e.target.value)
-      const { value } = e.target
-      this.setState({trip_type: value})
+      })
     }
 
     render() {
-        if(this.state.created === true){
-            return <Redirect to="/user-reviews"/>
-        }
-        return (
-        
-                
-     <form className="datForm" onSubmit={this.onReviewFormSubmit}>
-                 <h1>Give Us Your Review</h1>
+     
+      if(this.state.created === true){
+        return <Redirect to={`/create-review/${this.state.review.createReview.id}`}>Edit Bars</Redirect> 
+      }
+      
+      return (
+        <form className="datForm" onSubmit={this.onReviewFormSubmit}>
+        <h1>Give Us Your Review</h1>
 
         <div className="field">
           <label htmlFor="name" className="label">Username</label>
@@ -85,18 +79,16 @@ class CreateReview extends Component {
   </div>
           
           <div className="field">
-            <label className="label" htmlFor="dropdown">Type of Trip</label>
+            <label className="label">Type of Trip</label>
             <div className="control">
               <div className="select">
-                <select value={this.state.trip_type}  onChange={this.onDropDown}>
-                
-                  <option >Select Trip-Type</option>
-                  <option value="With Friends">With Friends</option>
-                  <option value="With Family">With Family</option>
-                  <option value="On Business">On Business</option>
-                  <option value="Traveled Solo">Traveled Solo</option>
-                  <option value="Traveled as Couple">Traveled as Couple</option>
-
+                <select>
+                  <option>Select Trip-Type</option>
+                  <option>With Friends</option>
+                  <option>With Family</option>
+                  <option>On Business</option>
+                  <option>Traveled Solo</option>
+                  <option>Traveled as couple</option>
                 </select>
               </div>
             </div>
