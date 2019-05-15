@@ -68,7 +68,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>YERRRRRRRR</h1>
+        {/* <h1>YERRRRRRRR</h1> */}
         <Header />
         <Switch>
           <Route 
