@@ -210,8 +210,8 @@ const bar02 =await Bar.create({
     zip_code:'00901',
     phone_number:'1-787-344-3859',
     type:'cozy',
-    longitude: "18.467222",
-    latitude: "-66.117750"
+    longitude: "18.467195",
+    latitude: "-66.117748"
 })
 const bar03 = await Bar.create({
     name: '1608 Bar à vin & fromage',
@@ -219,8 +219,8 @@ const bar03 = await Bar.create({
     zip_code:'G1R 5J5',
     phone_number:'1-418-692-3861',
     type:'groups',
-    longitude: "46.811971",
-    latitude: "-71.204978"
+    longitude: "46.812200",
+    latitude: "-71.205700"
 })
 const bar04 = await Bar.create({
     name: 'Pub St-Patrick',
@@ -228,8 +228,8 @@ const bar04 = await Bar.create({
     zip_code:'G1R 1S8',
     phone_number:' 1-418-694-0618',
     type:'irish pub',
-    longitude: "18.432386",
-    latitude: "-66.058523"
+    longitude: "-71.208949",
+    latitude: "46.814814"
 })
 const bar05 = await Bar.create({
     name: 'Luce',
@@ -237,8 +237,8 @@ const bar05 = await Bar.create({
     zip_code:'Trinidad Trinidad',
     phone_number:'1-868-285-5823',
     type:'cozy',
-    longitude: "10.671950",
-    latitude: "-61.508808"
+    longitude: "-64.903129",
+    latitude: "-14.840510"
 })
 const bar06 = await Bar.create({
     name: 'Trotters',
@@ -246,8 +246,8 @@ const bar06 = await Bar.create({
     zip_code:'Port of Spain',
     phone_number:'1-868-627-8768',
     type:'sports bar',
-    longitude: "10.667803",
-    latitude: "-61.518813"
+    longitude: "-61.518684",
+    latitude: "10.671060"
 })
 const bar07 = await Bar.create({
     name: `Vernon's Speakeasy`,
@@ -255,8 +255,8 @@ const bar07 = await Bar.create({
     zip_code:'87107',
     phone_number:'505-341-0831',
     type:'steak house',
-    longitude: "35.160553",
-    latitude: "-106.637626"
+    longitude: "-106.637260",
+    latitude: "35.160553"
 })
 const bar08 = await Bar.create({
     name: 'Left Turn Distilling',
@@ -264,8 +264,8 @@ const bar08 = await Bar.create({
     zip_code:'87107',
     phone_number:'1-787-412-4251',
     type:'bar',
-    longitude: "35.115698",
-    latitude: "-106.613228"
+    longitude: "-106.613228",
+    latitude: "35.115698"
 })
 const bar09 = await Bar.create({
     name: 'Arundel Wharf - Seafood - Cocktail Bar - Craft Beer - Wine Bar - Lobster Rolls',
@@ -273,8 +273,8 @@ const bar09 = await Bar.create({
     zip_code:'04046',
     phone_number:'207-967-3444',
     type:'seafood restaurant',
-    longitude: "43.359082",
-    latitude: "-70.476028"
+    longitude: "43.359346",
+    latitude: "-70.476009"
 })
 const bar10 = await Bar.create({
     name: 'Bandaloop',
@@ -291,8 +291,8 @@ const bar11 = await Bar.create({
     zip_code:'14520 Port-en-Bessin-Huppain',
     phone_number:'33-2-31-21-70-44',
     type:'bar',
-    longitude: "49.348040",
-    latitude: "-0.755475"
+    longitude: "49.347859",
+    latitude: "-0.755179"
 })
 const bar12 = await Bar.create({
     name: 'La Rotonde',
@@ -300,8 +300,8 @@ const bar12 = await Bar.create({
     zip_code:'14520 Port-en-Bessin-Huppain',
     phone_number:' 33-2-31-21-72-25',
     type:'bar',
-    longitude: "49.346457",
-    latitude: "-0.754892"
+    longitude: "-0.771747",
+    latitude: "49.338886"
 })
 const bar13 = await Bar.create({
     name: 'Florería Atlántico',
@@ -309,8 +309,8 @@ const bar13 = await Bar.create({
     zip_code:'Buenos Aires',
     phone_number:'54-11-4313-6093',
     type:'chic',
-    longitude: "-34.591567",
-    latitude: "-58.379553"
+    longitude: "-58.379600",
+    latitude: "-34.591600"
 })
 const bar14 = await Bar.create({
     name: 'Bar 878',
@@ -318,8 +318,8 @@ const bar14 = await Bar.create({
     zip_code:'Buenos Aires',
     phone_number:'54-11-4773-1098',
     type:'bar',
-    longitude: "-34.592877",
-    latitude: "-58.439057"
+    longitude: "-58.439029",
+    latitude: "-34.592835"
 })
 const bar15 = await Bar.create({
     name: 'The Blind Rabbit',
@@ -327,8 +327,8 @@ const bar15 = await Bar.create({
     zip_code:'92805',
     phone_number:'not listed',
     type:'casual',
-    longitude: "33.831506",
-    latitude: "-117.911978"
+    longitude: "-117.912514",
+    latitude: "33.831856"
 })
 const bar16 = await Bar.create({
     name: 'Trader Sam’s Enchanted Tiki Bar',
@@ -336,8 +336,8 @@ const bar16 = await Bar.create({
     zip_code:'92802',
     phone_number:'714-781-3463',
     type:'tiki bar',
-    longitude: "33.808262",
-    latitude: "-117.926602"
+    longitude: "-117.927032",
+    latitude: "33.809189"
 })
 const bar17 = await Bar.create({
     name: 'Lumni - Restaurante & Bar',
@@ -345,8 +345,8 @@ const bar17 = await Bar.create({
     zip_code:' 1250-237',
     phone_number:'351-21-116-0210',
     type:'restaurant',
-    longitude: "38.713970",
-    latitude: "-9.144050"
+    longitude: "-9.140093",
+    latitude: "38.748243"
 })
 const bar18 = await Bar.create({
     name: 'Alto do Bairro - Tapas Bar',
@@ -354,8 +354,8 @@ const bar18 = await Bar.create({
     zip_code:'1200-063',
     phone_number:'351-961-499-060',
     type:'tapas restaurant',
-    longitude: "38.713781",
-    latitude: "-9.144969"
+    longitude: "-9.199623",
+    latitude: "38.995432"
 })
 
 const bar19 =await Bar.create({
@@ -364,8 +364,8 @@ const bar19 =await Bar.create({
     zip_code:'010091',
     phone_number:'40 770 550 234',
     type:'bar',
-    longitude: "44.443014",
-    latitude: "26.093230"
+    longitude: "26.087179",
+    latitude: "44.450878"
 })
 const bar20 = await Bar.create({
     name: `Caru' cu Bere`,
@@ -373,8 +373,8 @@ const bar20 = await Bar.create({
     zip_code:'030081',
     phone_number:'40 726 282 373',
     type:'romanian restaurant',
-    longitude: "44.432068",
-    latitude: "26.098131"
+    longitude: "26.096650",
+    latitude: "44.428020"
 })
 const bar21 = await Bar.create({
     name: 'Beereau',
@@ -382,8 +382,8 @@ const bar21 = await Bar.create({
     zip_code:'10117',
     phone_number:'49 30 31176081',
     type:'bar',
-    longitude: "52.524971",
-    latitude: "13.386741"
+    longitude: "13.386688",
+    latitude: "52.524992"
 })
 const bar22 = await Bar.create({
     name: 'Vincent Piano Bar',
@@ -391,8 +391,8 @@ const bar22 = await Bar.create({
     zip_code:'10117',
     phone_number:'49 30 27582305',
     type:'cocktail bar',
-    longitude: "52.521583",
-    latitude: "13.385889"
+    longitude: "13.385983",
+    latitude: "52.521528"
 })
 const bar23 = await Bar.create({
     name: `Claridge's Bar`,
@@ -401,8 +401,8 @@ const bar23 = await Bar.create({
     zip_code:'W1K 4HR, ',
     phone_number:'44 20 7629 8860',
     type:'casual',
-    longitude: "51.512475",
-    latitude: "-0.147886"
+    longitude: "-85.756121",
+    latitude: "38.221232"
 })
 const bar24 = await Bar.create({
     name: 'Wine Unearthed - London Wine Tasting',
@@ -411,8 +411,8 @@ const bar24 = await Bar.create({
     zip_code:'W1K 3NP',
     phone_number:'44 345 299 8652',
     type:'wine bar',
-    longitude: "51.510092",
-    latitude: "-0.148312"
+    longitude: "-83.004418",
+    latitude: "39.982058"
 })
   //  Set the relationship between the  bar hotel, review and destination
 //   Destination.hasMany(Hotel); 

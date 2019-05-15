@@ -1,6 +1,6 @@
 import React from 'react';
 import ShowReview from '../ShowReview/ShowReview';
-import UpdateReview from '../UpdateReview/UpdateReview'
+import updateReview from '../updateReview/updateReview'
 
 const ReviewList = ({ reviews }) => {
     const reviewData = reviews && reviews[0]
@@ -9,7 +9,7 @@ const ReviewList = ({ reviews }) => {
 console.log(reviewData)
     return (
         <div>
-            <UpdateReview review={reviews}/>
+            <updateReview review={reviews}/>
             <h1>{reviewData}</h1>
         </div>
     )

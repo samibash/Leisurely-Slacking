@@ -40,13 +40,14 @@ class CreateReview extends Component {
     }
     onDropDown = async (e) =>{
       e.preventDefault()
-      const { dropdown, value } = e.target
-      this.setState({[dropdown]: value})
+      // console.log(e.target.value)
+      const { value } = e.target
+      this.setState({trip_type: value})
     }
 
     render() {
         if(this.state.created === true){
-            return <Redirect to="/reviews"/>
+            return <Redirect to="/user-reviews"/>
         }
         return (
         
@@ -87,14 +88,14 @@ class CreateReview extends Component {
             <label className="label" htmlFor="dropdown">Type of Trip</label>
             <div className="control">
               <div className="select">
-                <select value={this.state.trip_type}  onChange={(e) => this.setState({type_trip: e.target.value})}>
+                <select value={this.state.trip_type}  onChange={this.onDropDown}>
                 
-                  <option>Select Trip-Type</option>
-                  <option>With Friends</option>
-                  <option>With Family</option>
-                  <option>On Business</option>
-                  <option>Traveled Solo</option>
-                  <option>Traveled as couple</option>
+                  <option >Select Trip-Type</option>
+                  <option value="With Friends">With Friends</option>
+                  <option value="With Family">With Family</option>
+                  <option value="On Business">On Business</option>
+                  <option value="Traveled Solo">Traveled Solo</option>
+                  <option value="Traveled as Couple">Traveled as Couple</option>
 
                 </select>
               </div>
