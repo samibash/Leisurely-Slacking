@@ -15,9 +15,9 @@ class Map extends Component {
             viewport: {
                 width: 725,
                 height: 400,
-                latitude: -77.38,
-                longitude: 39,
-                zoom: 3
+                latitude: 51,
+                longitude: 0,
+                zoom: 0
               },
               popupInfo: null
         }
@@ -27,6 +27,7 @@ class Map extends Component {
     }
     
     _renderMarker(bars, i){
+        console.log('test')
         const lat = Number(bars.latitude);
         const lng = Number(bars.longitude);
         
@@ -60,7 +61,7 @@ class Map extends Component {
     render() {
        
 
-        const bars = this.props
+        const { bars } = this.props
         console.log(bars)
        
        
@@ -74,12 +75,12 @@ class Map extends Component {
             longitude={viewport.longitude}
             zoom={viewport.zoom}
     
-            mapStyle="mapbox://styles/mapbox/dark-v10"
+            mapStyle="mapbox://styles/mapbox/light-v9"
             onViewportChange={(viewport) => this.setState({viewport})}
             mapboxApiAccessToken={MAPBOX_TOKEN}>
             
-            {/* {bars.map(this._renderMarker) }
-            {this.state.popupInfo && this._renderPopup()} */}
+            {bars.map(this._renderMarker) }
+            {this.state.popupInfo && this._renderPopup()} 
             
         </ReactMapGL>
         );

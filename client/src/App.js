@@ -10,6 +10,7 @@ import{ fetchReview } from './services/Reviews'
 // import Months from './components/Home/Months'
 // import BarsList from './services/BarsList'
 // import Reviews from './services/Reviews'
+import UserReviews from './components/UserReviews/UserReviews'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
@@ -83,8 +84,14 @@ class App extends Component {
           <Route 
             path='/create-reviews' 
             component={CreateReview} 
-            reviews={this.state.reviews} />
+            // reviews={this.state.reviews}
+             />
           
+          <Route 
+            path='/user-reviews' 
+            component={UserReviews} 
+             />
+
           <Route 
             exact path='/bars'
             render={() => <BarsList bars={this.state.bars}/>} 
