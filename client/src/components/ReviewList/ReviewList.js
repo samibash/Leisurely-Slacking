@@ -1,6 +1,6 @@
 import React from 'react';
 import ShowReview from '../ShowReview/ShowReview';
-import UpdateReview from '../UpdateReview/UpdateReview'
+import UpdateReview from '../updateReview/updateReview'
 
 const ReviewList = ({ reviews }) => {
     const reviewData = reviews && reviews[0]
