@@ -1,0 +1,7 @@
+.block{
+    display: flex;
+}
+.box{
+    width: 300px;
+    height:300px
+}
