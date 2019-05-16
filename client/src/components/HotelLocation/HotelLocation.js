@@ -19,7 +19,7 @@ class HotelLocation extends Component {
     const  {hotels} = this.props    
         
     return (
-      <section className="section">
+      <section className="section" id="dis-thingy">
         <div className="container">
           <h1 className="title">{hotels.name}</h1>
           <h4>{hotels.location}</h4>
