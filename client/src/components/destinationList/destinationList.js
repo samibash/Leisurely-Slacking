@@ -1,5 +1,6 @@
 import React from 'react';
 import CityLocation from '../CityLocation/CityLocation'
+import './destinationList.css'
 
 
 const DestinationList = ({ destinations }) => {
@@ -9,7 +10,14 @@ const DestinationList = ({ destinations }) => {
    
     return(
         <div className="DestinationList">
-            <h1>{data}</h1>
+                <section className="section">
+                    <div className="columns">
+                        <div className="column">
+                        <h1 class="title is-1">Destinations</h1>                         
+                        {data}
+                        </div>
+                    </div>
+                </section>
         </div>
     )
 }

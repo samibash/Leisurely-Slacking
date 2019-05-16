@@ -6,7 +6,7 @@ const HotelList = ({hotels}) => {
     const hotelData = hotels && hotels.map((hotels,index) => {
         return <HotelLocation key={index} hotels={hotels}/>
     })
-   console.log(hotels)
+//    console.log(hotels)
     return(
         <div className="HotelsList">
             <h1>{hotelData}</h1>

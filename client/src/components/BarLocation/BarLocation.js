@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import BarsList from '../BarsList/BarsList';
+// import './HotelLocation.css'
 
 const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
+
+class BarLocation extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
+
+  render() {
+
+    const  {bars} = this.props
 
     return (
       <div className="BarItem">
@@ -18,7 +31,6 @@ const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
       </div>
      
     );
-
 }
 
-export default BarLocation
+export default BarLocation;
