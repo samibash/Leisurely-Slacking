@@ -1,48 +1,8 @@
 import React, { Component } from 'react';
-import { updateReview } from '../../services/Reviews';
+import { updateReview, } from '../../services/Reviews';
 
 class UpdateReview extends Component {
-    constructor(props) {
-        super(props)
     
-        this.state = {
-            review: props.review,
-            created: false
-        }
-    }
-
-    onReviewFormChange = async (event) => {
-        const { name, value } = event.target
-        this.setState({ [name]: value })
-        console.log(value)
-            await this.setState(prevState => {
-            let newReview = prevState.reviews
-            // newReview[name] = value
-            console.log('set', newReview)
-            console.log(this.state.review)
-            // return newReview
-        })
-    }
-
-    onReviewFormSubmit = async (e) => {
-        e.preventDefault()
-        console.log(`Review Updated:`, this.state)
-
-        let reviewUpdate = {
-            user_name: this.state.user_name,
-            caption: this.state.caption,
-            experience: this.state.experience,
-            trip_type: this.state.trip_type
-        }
-        console.log(reviewUpdate)
-        const review = await updateReview(reviewUpdate)
-        console.log(review)
-        this.setState({
-            review: updateReview,
-            created: true
-        })
-    }
-
     render() {
         return (
             <div>

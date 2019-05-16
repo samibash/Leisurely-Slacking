@@ -40,14 +40,14 @@ class CreateReview extends Component {
     }
 
     render() {
-     
-      if(this.state.created === true){
-        return <Redirect to={`/create-review/${this.state.review.createReview.id}`}>Edit Bars</Redirect> 
-      }
-      
-      return (
-        <form className="datForm" onSubmit={this.onReviewFormSubmit}>
-        <h1>Give Us Your Review</h1>
+        if(this.state.created === true){
+            return <Redirect to="/reviews"/>
+        }
+        return (
+        
+                
+     <form className="datForm" onSubmit={this.onReviewFormSubmit}>
+                 <h1>Give Us Your Review</h1>
 
         <div className="field">
           <label htmlFor="name" className="label">Username</label>

@@ -43,6 +43,16 @@ reviewRouter.put('/reviews/:id', async (req, res) => {
   }
 })
 
+// reviewRouter.put('/reviews/:id', async (req, res, next) =>{
+//   Review.update(
+//     {name: req.body.name},
+//     {where: req.params.id}
+//   )
+//   .then(function(rowsUpdated) {
+//     res.json(rowsUpdated)
+//   })
+//   .catch(next)
+//  })
 reviewRouter.delete('/reviews/:id', async (req, res) => {
     try {
       const deletion = await Review.findByPk(req.params.id);
