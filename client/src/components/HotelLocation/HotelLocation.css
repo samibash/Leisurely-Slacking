@@ -5,3 +5,7 @@
     margin-left: 20%;
     padding: 9rem 1.5rem
 }
+
+#dis-thingy {
+    border-color: hsl(171, 100%, 41%);
+}
