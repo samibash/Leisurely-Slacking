@@ -6,7 +6,7 @@ const api = axios.create({
     baseURL: `${URL}/bars`
 })
 
-export const fetchAllBars = async ()=>{
+export const fetchAllBars = async () => {
     try {
         const resp = await api.get('/')
         return resp.data;  
@@ -35,12 +35,4 @@ export const updateBar = async (id, data) => {
     }
 }
 
-// export const deleteBar = async (id)=>{
-//     try {
-//         const resp = await api.delete(`/${id}`)
-//         return resp.data
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
 

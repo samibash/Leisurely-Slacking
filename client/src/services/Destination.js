@@ -15,7 +15,7 @@ export const fetchDestination = async () => {
     }
 }
 
-export const createDestination = async (data)=>{
+export const createDestination = async (data) => {
     try {
         const resp = await api.post('/', data)
         console.log(resp)
@@ -24,12 +24,3 @@ export const createDestination = async (data)=>{
         console.log(error)
     }
 }
-
-// export const UpdateDestination = async (id,data)=>{
-//     try {
-//        const resp = await api.put( `/ ${id}`, data)
-//        return resp.data.destination
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }

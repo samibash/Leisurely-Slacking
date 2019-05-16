@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
-
-import {
-  updateBar,
-} from '../../services/Bars';
+import { updateBar } from '../../services/Bars';
 
 class UpdateBarPage extends Component {
   constructor(props){
@@ -33,8 +30,6 @@ class UpdateBarPage extends Component {
   onBarFormSubmit = async (event) => {
     event.preventDefault()
 
-    console.log(`Form submitted: `, this.props.currentBar)
-
     let updatedBar = {
       name: this.state.bar.name,
       address: this.state.bar.address,
@@ -42,36 +37,18 @@ class UpdateBarPage extends Component {
       zip_code: this.state.bar.zip_code,
       type:this.state.bar.type
     }
-
-    console.log(updatedBar)
-
     const bar = await updateBar(this.props.currentBar.id, updatedBar)
 
     this.setState({
       bar: bar,
       updated: true
     })
-
-    console.log(this.props)
   }
 
-
-
-
-  
-    
   render(){
-    console.log(this.props)
-
     if(this.state.updated === true) {
       return <Redirect to="/bars" />
     }
-
-    // console.log(this.props)
-
-    // if(this.state.updated === true) {
-    //   return <Redirect to="/bars" />
-    // }
     
     return (
       <div className="updateBarPage">
@@ -97,6 +74,7 @@ class UpdateBarPage extends Component {
             onChange={ this.onBarFormChange }
             placeholder="123 main st" />
         </div>
+        
         <div>
         <label htmlFor="phone_number">Bar Phone Number:</label>
           <input
