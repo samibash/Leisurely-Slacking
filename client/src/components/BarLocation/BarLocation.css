@@ -1,7 +1,12 @@
 .block{
     display: flex;
 }
+
 .box{
     width: 300px;
     height:300px
+}
+
+.section {
+    border-color: hsl(171, 100%, 41%);
 }
