@@ -66,6 +66,7 @@ class Map extends Component {
                 mapStyle="mapbox://styles/mapbox/light-v9"
                 onViewportChange={(viewport) => this.setState({viewport})}
                 mapboxApiAccessToken={MAPBOX_TOKEN}>
+                
                 {bars.map(this._renderMarker) }
                 {this.state.popupInfo && this._renderPopup()}            
             </ReactMapGL>
