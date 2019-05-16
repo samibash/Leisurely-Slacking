@@ -1,7 +1,15 @@
 import React from 'react';
+import { deleteReview } from '../../services/Reviews'
 import './ShowReview.css'
 
 const ShowReview = ({ reviews }) => {
+  
+  const onReviewDelete = async (reviews) => {
+    console.log(reviews.id)
+    await deleteReview(reviews.id, reviews)
+    document.location.reload();
+    
+  }
 
     return (
     <div className="container">
@@ -20,6 +28,7 @@ const ShowReview = ({ reviews }) => {
                 <div className="content">
                 <strong>Type: </strong>{reviews.trip_type}
                   <div className="background-icon"><span className="icon-twitter" /></div>
+              <button onClick={() => onReviewDelete(reviews)}>DELETE</button>
                 </div>
               </div>
             </div>
