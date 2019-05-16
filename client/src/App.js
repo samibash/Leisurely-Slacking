@@ -17,6 +17,9 @@ import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/destinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
 import Map from './components/Map/Map';
+import CreateBarPage from './components/CreateBarPage/CreateBarPage'
+
+import UpdateBarsPage from "./components/UpdateBarsPage/UpdateBarsPage"
 
 class App extends Component {
   constructor(props) {
@@ -68,7 +71,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>YERRRRRRRR</h1>
+        {/* <h1>YERRRRRRRR</h1> */}
         <Header />
         <Switch>
           <Route 
@@ -96,21 +99,24 @@ class App extends Component {
             exact path='/bars'
             render={() => <BarsList bars={this.state.bars}/>} 
           />   
+           <Route
+            path='/create-bar'
+            component={ CreateBarPage } />
+
+          <Route
+            path="/bars/:id"
+            render={() => <UpdateBarsPage bars={this.state.bars} />} />
 
           <Route 
             exact path='/reviews'
             render={() => <ReviewList reviews={this.state.reviews}/>} 
-          />   
-          <section className="section">
-            <div className="columns">
-              <div className="column">
-              <Route 
-                exact path='/'
-                render={() =>  <Map  bars={this.state.bars} component={Map}/>} 
-              /> 
-              </div>
-            </div>
-          </section> 
+          />  
+
+          <Route 
+            exact path='/'
+            render={() =>  <Map  bars={this.state.bars} component={Map}/>} 
+          />  
+
         </Switch>
       </div>
     );
