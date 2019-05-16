@@ -29,7 +29,7 @@ class UpdateBarPage extends Component {
     })
   }
 
-  
+
   onBarFormSubmit = async (event) => {
     event.preventDefault()
 
@@ -56,15 +56,22 @@ class UpdateBarPage extends Component {
   }
 
 
+
+
   
     
   render(){
-
     console.log(this.props)
 
     if(this.state.updated === true) {
       return <Redirect to="/bars" />
     }
+
+    // console.log(this.props)
+
+    // if(this.state.updated === true) {
+    //   return <Redirect to="/bars" />
+    // }
     
     return (
       <div className="updateBarPage">
