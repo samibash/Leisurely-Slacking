@@ -6,10 +6,7 @@ import{ fetchDestination } from './services/Destination'
 import{ fetchAllBars } from './services/Bars'
 import{ fetchHotel } from './services/Hotels'
 import{ fetchReview } from './services/Reviews'
-// import updateReview from "./components/updateReview/updateReview"
-// import Months from './components/Home/Months'
-// import BarsList from './services/BarsList'
-// import Reviews from './services/Reviews'
+
 import UserReviews from './components/UserReviews/UserReviews'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
@@ -29,7 +26,8 @@ class App extends Component {
        destinations:[],
        hotels:[],
        bars:[],
-       reviews:[]
+       reviews:[],
+       currentBar: {}
     }
   }
   
@@ -37,6 +35,12 @@ class App extends Component {
     const destinations = await fetchDestination()
       this.setState({
       destinations: destinations
+    })
+  }
+
+  setCurrentBar = (bar) => {
+    this.setState({
+      currentBar: bar
     })
   }
 
@@ -97,7 +101,10 @@ class App extends Component {
 
           <Route 
             exact path='/bars'
-            render={() => <BarsList bars={this.state.bars}/>} 
+            render={() => <BarsList 
+                            bars={this.state.bars}
+                            currentBar={this.state.currentBar}
+                            setCurrentBar={this.setCurrentBar} />} 
           />   
            <Route
             path='/create-bar'
@@ -105,7 +112,10 @@ class App extends Component {
 
           <Route
             path="/bars/:id"
-            render={() => <UpdateBarsPage bars={this.state.bars} />} />
+            render={() => <UpdateBarsPage bars={this.state.bars}
+                                          currentBar={this.state.currentBar}
+                                          setCurrentBar={this.setCurrentBar} />} 
+          />
 
           <Route 
             exact path='/reviews'

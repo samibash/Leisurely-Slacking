@@ -1,23 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-const BarLocation = ({ bars }) => {
+const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
 
     return (
       <div className="BarItem">
-        <h2>{bars.name}</h2>
-        <li>{bars.address}</li>
-        <li>{bars.zip_code}</li>
-        <li>{bars.phone_number}</li>
-        <li>{bars.type}</li>
+        <h2>{bar.name}</h2>
+        <li>{bar.address}</li>
+        <li>{bar.zip_code}</li>
+        <li>{bar.phone_number}</li>
+        <li>{bar.type}</li>
           <div>
-            <Link to={`/bars/${bars.id}`}>Edit Bars</Link>        
+            <Link 
+              onClick={()=> setCurrentBar(bar)}
+              to={`/bars/${bar.id}`}>Edit Bars</Link>        
           </div>
-        
-
-          <div>
-        </div>
-        </div>
+      </div>
      
     );
 
