@@ -15,3 +15,31 @@ export const fetchAllBars = async ()=>{
     }
 }
 
+export const createBar = async (data) => {
+    try {
+      const resp = await api.post('/', data)
+      console.log(resp)
+      return resp.data
+    } catch (e) {
+      console.log(e)
+    }
+}
+
+export const updateBar = async (id, data)=>{
+    try {
+        const resp = await api.put(`/${id}`, data)
+        return resp.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// export const deleteBar = async (id)=>{
+//     try {
+//         const resp = await api.delete(`/${id}`)
+//         return resp.data
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
