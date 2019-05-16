@@ -1,4 +1,9 @@
 .section {
-    border-color: hsl(171, 100%, 41%);
+    /* border-color: hsl(171, 100%, 41%); */
+    border-color: white;
 }
 
+#height-adjust {
+    margin: -125px;
+    margin-left: -55px;
+}

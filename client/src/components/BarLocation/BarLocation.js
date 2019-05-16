@@ -4,13 +4,10 @@ import './BarLocation.css'
 
 const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
 
-    return (
+    return ( 
     <div className="BarLocation">
-      <section className="section">
+      <section className="section" id="dis-dis">
         <div className="columns">
-          <div className="column">
-            mapbox column
-          </div>
           <div className="column">
             <div className="BarItem">
               <h2><strong>Name: </strong>{bar.name}</h2>
