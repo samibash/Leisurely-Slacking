@@ -3,7 +3,7 @@ const { Bar } = require('../models');
 const barRouter = express.Router();
 
 
-barRouter.get('/bars', async (req, res) => {
+barRouter.get('/', async (req, res) => {
   try {
     const allbars = await Bar.findAll()
     res.json(allbars)
@@ -12,7 +12,7 @@ barRouter.get('/bars', async (req, res) => {
   }
 });
 
-barRouter.get('/bars/:id', async (req, res) => {
+barRouter.get('/:id', async (req, res) => {
   try {
     const onebar = await Bar.findByPk(req.params.id)
     res.json(onebar)
@@ -21,7 +21,7 @@ barRouter.get('/bars/:id', async (req, res) => {
   }
 });
 
-barRouter.post('/bars', async (req, res) => {
+barRouter.post('/', async (req, res) => {
   try {
     const createBar = await Bar.create(req.body)
     res.send({
@@ -33,18 +33,20 @@ barRouter.post('/bars', async (req, res) => {
   }
 })
 
-barRouter.put('/bars/:id', async (req, res) => {
+barRouter.put('/:id', async (req, res) => {
   try {
     const id = req.params.id;
-    const bar = await Bar.findByPk(id);
-
-    if (bar) await Bar.update(req.body);
-    res.json({
-      bar
-    });
+    const bars = await Bar.findByPk(id);
+    console.log(req.body);
+    if (bars) await Bar.update(req.body, { where: { id }});
     console.log(`Bar updated`, bar)
+    res.json({
+      bars
+    });
+    
   } catch(e) {
-    res.status(304).json({
+    console.log(e);
+    res.status(500).json({
       message: e.message
     });
   }

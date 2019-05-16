@@ -25,9 +25,10 @@ export const createBar = async (data) => {
     }
 }
 
-export const updateBar = async (id, data)=>{
+export const updateBar = async (id, data) => {
     try {
         const resp = await api.put(`/${id}`, data)
+        console.log(resp)
         return resp.data
     } catch (error) {
         console.log(error)

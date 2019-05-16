@@ -1,15 +1,12 @@
 import React from 'react';
 import BarLocation from '../BarLocation/BarLocation'
 
-const BarsList = ({bars}) => {
-    console.log(bars)
+const BarsList = ({bars, currentBar, setCurrentBar}) => {
+    // console.log(bars)
     const renderData = bars && bars[0]
-    ? bars.map((bars,index) => {
-        return <BarLocation key={index} bars={bars}/>})
+    ? bars.map((bar, index) => {
+        return <BarLocation key={index} bar={bar} currentBar={currentBar} setCurrentBar={setCurrentBar}/>})
         : null
-    // const barData = bars && bars.map((bars,index)=>{
-    //     return <BarLocation key={index} bars={bars}/>
-    // })
         
     return(
          <div className="DestinationList">

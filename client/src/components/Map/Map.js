@@ -27,7 +27,7 @@ class Map extends Component {
     }
     
     _renderMarker(bars, i){
-        console.log('test')
+        // console.log('test')
         const lat = Number(bars.latitude);
         const lng = Number(bars.longitude);
         
@@ -62,7 +62,7 @@ class Map extends Component {
        
 
         const { bars } = this.props
-        console.log(bars)
+        // console.log(bars)
        
        
         const { viewport } = this.state;
