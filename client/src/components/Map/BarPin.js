@@ -11,9 +11,7 @@ const pinStyle = {
 };
 
 class BarPin extends PureComponent {
-
   render() {
-  
     const {size = 20, onClick} = this.props;
 
     return (
