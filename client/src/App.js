@@ -14,6 +14,7 @@ import DestinationList from './components/DestinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
 import CreateBarPage from './components/CreateBarPage/CreateBarPage'
 import UpdateBarsPage from "./components/UpdateBarsPage/UpdateBarsPage"
+import Calendar from './components/Home/Months'
 
 class App extends Component {
   constructor(props) {
@@ -68,6 +69,7 @@ class App extends Component {
     this.fetchHotelData()
     this.fetchReviewData()
   }
+
   render() {
 
     return (
@@ -78,6 +80,8 @@ class App extends Component {
             exact path='/destinations' 
             render={() => <DestinationList destinations={this.state.destinations}/>} 
           /> 
+
+          <Route exact path='/' component={Calendar}/> 
 
           <Route 
             exact path='/hotels' 
