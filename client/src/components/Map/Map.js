@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import BarPin from './BarPin'
 import BarInfo from './BarInfo'
+import './Map.css'
+
 
 const MAPBOX_TOKEN='pk.eyJ1IjoibmllY2V5MDEyMyIsImEiOiJjanZwY2NsamkwcWR4NDRyaHZiN2syajNyIn0.RhkAztXI7yt4MyVHAK6rfw'
 class Map extends Component {
@@ -9,13 +11,13 @@ class Map extends Component {
         super()
         this.state = {
             viewport: {
-                width: 725,
-                height: 400,
-                latitude: 51,
-                longitude: 0,
-                zoom: 0
-            },
-            popupInfo: null
+                width: 1000,
+                height: 600,
+                latitude: 41,
+                longitude: -42,
+                zoom: 2
+              },
+              popupInfo: null
         }
     this._renderMarker = this._renderMarker.bind(this)
     this._renderPopup = this._renderPopup.bind(this)

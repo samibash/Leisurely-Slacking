@@ -1,5 +1,6 @@
 import React from 'react';
 import BarLocation from '../BarLocation/BarLocation'
+import Map from "../Map/Map"
 
 const BarsList = ({bars, currentBar, setCurrentBar}) => {
     const renderData = bars && bars[0] ? bars.map((bar, index) => {
@@ -10,9 +11,10 @@ const BarsList = ({bars, currentBar, setCurrentBar}) => {
             setCurrentBar={setCurrentBar}/>})
         : null
     return(
-        <div className="DestinationList">
-            <h1>{renderData}</h1>
-        </div>
+         <div className="DestinationList">
+        <Map  bars={bars} component={Map}/>
+             <h1>{renderData}</h1>
+         </div>
     )
 }
 

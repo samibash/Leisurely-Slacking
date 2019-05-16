@@ -10,10 +10,10 @@ class BarInfo extends PureComponent {
     const number = `${info.phone_number}  `
     return (
       <div>
-        <p>{displayName}</p>
-        <p>{address}</p>
-        <p>{zip}</p>
-        <p>{number}</p>
+      <span>Bar Name:</span><p>{displayName}</p>
+      <span>Bar Address:</span> <p>{address}</p>
+      <span>Bar Zipcode:</span> <p>{zip}</p>
+      <span>Bar Number:</span> <p>{number}</p>
       </div>
     )
   }

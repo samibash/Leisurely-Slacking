@@ -12,7 +12,6 @@ import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/DestinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
-import Map from './components/Map/Map';
 import CreateBarPage from './components/CreateBarPage/CreateBarPage'
 import UpdateBarsPage from "./components/UpdateBarsPage/UpdateBarsPage"
 
@@ -121,12 +120,6 @@ class App extends Component {
             exact path='/reviews'
             render={() => <ReviewList reviews={this.state.reviews}/>} 
           />  
-
-          <Route 
-            exact path='/'
-            render={() => <Map bars={this.state.bars} component={Map}/>} 
-          /> 
-
         </Switch>
       </div>
     );

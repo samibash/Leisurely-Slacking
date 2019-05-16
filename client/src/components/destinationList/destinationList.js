@@ -10,11 +10,12 @@ const DestinationList = ({ destinations }) => {
    
     return(
         <div className="DestinationList">
-            <section className="section">
-                <div className="columns">
-                    <div className="column">
-                    <h1 class="title is-1">Destinations</h1>                         
-                    {data}
+                <section className="section">
+                    <div className="columns">
+                        <div className="column">
+                        <h1 className="title is-1">Destinations</h1>                         
+                        {data}
+                        </div>
                     </div>
                 </div>
             </section>
