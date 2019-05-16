@@ -9,7 +9,7 @@ const DestinationList = ({ destinations }) => {
     })
    
     return (
-        <div className="DestinationList">
+        <div className="DestinationList" id="height-adjust">
             <section className="section">
                 <div className="columns">
                     <div className="column">
