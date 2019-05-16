@@ -11,10 +11,10 @@ class Map extends Component {
         super()
         this.state = {
             viewport: {
-                width: 1000,
+                width: 1600,
                 height: 600,
-                latitude: 41,
-                longitude: -42,
+                latitude: 7,
+                longitude: -39,
                 zoom: 2
               },
               popupInfo: null
