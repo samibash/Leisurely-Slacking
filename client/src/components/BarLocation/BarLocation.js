@@ -1,20 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
-import BarsList from '../BarsList/BarsList';
-// import './HotelLocation.css'
 
 const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
-
-class BarLocation extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
-
-  render() {
-
-    const  {bars} = this.props
 
     return (
       <div className="BarItem">
@@ -24,13 +11,19 @@ class BarLocation extends Component {
         <li>{bar.phone_number}</li>
         <li>{bar.type}</li>
           <div>
-            <Link 
+          <Link 
               onClick={()=> setCurrentBar(bar)}
-              to={`/bars/${bar.id}`}>Edit Bars</Link>        
+              to={`/bars/${bar.id}`}>Edit Bars</Link>           
           </div>
-      </div>
-     
+
+
+          <div>
+        </div>
+        </div>
+      
+
     );
 }
+
 
 export default BarLocation;
