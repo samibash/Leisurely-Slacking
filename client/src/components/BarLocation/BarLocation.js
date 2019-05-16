@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import './BarLocation.css'
+// import Map from '../Map/Map';
+
 
 const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
 
@@ -9,7 +11,7 @@ const BarLocation = ({ bar, currentBar, setCurrentBar }) => {
       <section className="section">
         <div className="columns">
           <div className="column">
-            mapbox column
+          {/* <Map  bars={} component={Map}/> */}
           </div>
           <div className="column">
             <div className="BarItem">

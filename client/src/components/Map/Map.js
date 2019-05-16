@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import BarPin from './BarPin'
 import BarInfo from './BarInfo'
-// import '../../Map.css'
+import './Map.css'
 
 
 
@@ -13,11 +13,11 @@ class Map extends Component {
         super()
         this.state ={
             viewport: {
-                width: 725,
-                height: 400,
-                latitude: 51,
-                longitude: 0,
-                zoom: 0
+                width: 1000,
+                height: 600,
+                latitude: 41,
+                longitude: -42,
+                zoom: 2
               },
               popupInfo: null
         }
