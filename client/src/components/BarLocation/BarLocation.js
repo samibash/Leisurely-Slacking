@@ -11,15 +11,16 @@ const BarLocation = ({ bars }) => {
         <li>{bars.phone_number}</li>
         <li>{bars.type}</li>
           <div>
-            <Link to={`/update-bar/${bars.id}`}>Edit Bars</Link>        
+            <Link to={`/bars/${bars.id}`}>Edit Bars</Link>        
           </div>
-
+        
 
           <div>
         </div>
         </div>
      
     );
+
 }
 
 export default BarLocation

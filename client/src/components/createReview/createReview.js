@@ -47,7 +47,7 @@ class CreateReview extends Component {
 
     render() {
         if(this.state.created === true){
-            return <Redirect to="/user-reviews"/>
+            return <Redirect to="/reviews"/>
         }
         return (
         

@@ -17,6 +17,9 @@ import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/DestinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
 import Map from './components/Map/Map';
+import CreateBarPage from './components/CreateBarPage/CreateBarPage'
+
+import UpdateBarsPage from "./components/UpdateBarsPage/UpdateBarsPage"
 
 class App extends Component {
   constructor(props) {
@@ -96,11 +99,19 @@ class App extends Component {
             exact path='/bars'
             render={() => <BarsList bars={this.state.bars}/>} 
           />   
+           <Route
+            path='/create-bar'
+            component={ CreateBarPage } />
+
+          <Route
+            path="/bars/:id"
+            render={() => <UpdateBarsPage bars={this.state.bars} />} />
 
           <Route 
             exact path='/reviews'
             render={() => <ReviewList reviews={this.state.reviews}/>} 
-          />   
+          />  
+
 
           <Route 
             exact path='/'
