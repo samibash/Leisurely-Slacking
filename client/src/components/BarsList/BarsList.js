@@ -7,7 +7,6 @@ const BarsList = ({bars, currentBar, setCurrentBar}) => {
     ? bars.map((bar, index) => {
         return <BarLocation key={index} bar={bar} currentBar={currentBar} setCurrentBar={setCurrentBar}/>})
         : null
-        
     return(
          <div className="DestinationList">
              <h1>{renderData}</h1>
