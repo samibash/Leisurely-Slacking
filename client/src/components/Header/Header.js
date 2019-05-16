@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
     render() {
         return (
-
-
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
@@ -22,17 +19,6 @@ export default class Header extends Component {
                 </div>
             </div>
         </nav>
-
-            //  <header>
-            //     <nav>
-            //         <Link to={'/'}>Home</Link>
-            //         <Link to={'/destinations'}>Destinations</Link>
-            //         <Link to={'/hotels'}>Hotels</Link>
-            //         <Link to={'/bars'}>Bars</Link>
-            //         {/* <Link to={'/create-reviews'}>Reviews</Link>
-            //         <Link to={'/reviews'}>Reviews</Link> */}
-            //     </nav>
-            // </header> 
         )
     }
 }

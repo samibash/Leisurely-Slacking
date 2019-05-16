@@ -4,8 +4,6 @@ class BarInfo extends PureComponent {
 
   render() {
     const { info } = this.props;
-    console.log(info);
-    
     const displayName = `${info.name}`;
     const address =  `${info.address}`
     const zip = `${info.zip_code} `
@@ -16,11 +14,8 @@ class BarInfo extends PureComponent {
       <span>Bar Address:</span> <p>{address}</p>
       <span>Bar Zipcode:</span> <p>{zip}</p>
       <span>Bar Number:</span> <p>{number}</p>
-
-        {/* <img width={20} src={info.imag}/> */}
       </div>
     )
-
   }
 }
 

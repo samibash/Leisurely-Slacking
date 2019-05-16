@@ -22,16 +22,16 @@ reviewRouter.get('/reviews/:id', async (req, res) => {
 });
 
 reviewRouter.post('/reviews', async (req, res) => {
-    try {
-      const createReview = await Review.create(req.body)
-      res.send({
-        createReview
-      })
-      console.log(`review created`, createReview)
-    } catch (e) {
-      res.status(500).json({ msg: e.message })
-    }
-  })
+  try {
+    const createReview = await Review.create(req.body)
+    res.send({
+      createReview
+    })
+    console.log(`review created`, createReview)
+  } catch (e) {
+    res.status(500).json({ msg: e.message })
+  }
+})
 
 reviewRouter.put('/reviews/:id', async (req, res) => {
   try {
@@ -43,24 +43,14 @@ reviewRouter.put('/reviews/:id', async (req, res) => {
   }
 })
 
-// reviewRouter.put('/reviews/:id', async (req, res, next) =>{
-//   Review.update(
-//     {name: req.body.name},
-//     {where: req.params.id}
-//   )
-//   .then(function(rowsUpdated) {
-//     res.json(rowsUpdated)
-//   })
-//   .catch(next)
-//  })
 reviewRouter.delete('/reviews/:id', async (req, res) => {
-    try {
-      const deletion = await Review.findByPk(req.params.id);
-      await deletion.destroy();
-      res.send(deletion);
-    } catch (e) {
-      console.log(e.message);
-    }
+  try {
+    const deletion = await Review.findByPk(req.params.id);
+    await deletion.destroy();
+    res.send(deletion);
+  } catch (e) {
+    console.log(e.message);
+  }
 });
 
 module.exports = reviewRouter

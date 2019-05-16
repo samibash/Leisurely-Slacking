@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { updateReview, } from '../../services/Reviews';
 
 class UpdateReview extends Component {
     
@@ -47,15 +46,6 @@ class UpdateReview extends Component {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div>
-                        <label htmlFor="name">Trip type:</label>
-                        <input 
-                            onChange={this.onReviewFormChange}
-                            name="trip_type"
-                        />
-                    </div>  */}
-                    <button onClick={this.onReviewFormSubmit} type="submit">Add Review</button>
                 </form>
             </div>
         )

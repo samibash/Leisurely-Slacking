@@ -6,16 +6,13 @@ import{ fetchDestination } from './services/Destination'
 import{ fetchAllBars } from './services/Bars'
 import{ fetchHotel } from './services/Hotels'
 import{ fetchReview } from './services/Reviews'
-
 import UserReviews from './components/UserReviews/UserReviews'
 import Header from './components/Header/Header'
 import BarsList from './components/BarsList/BarsList';
 import HotelList from './components/HotelList/HotelList';
 import DestinationList from './components/DestinationList/destinationList';
 import ReviewList from './components/ReviewList/ReviewList';
-// import Map from './components/Map/Map';
 import CreateBarPage from './components/CreateBarPage/CreateBarPage'
-
 import UpdateBarsPage from "./components/UpdateBarsPage/UpdateBarsPage"
 
 class App extends Component {
@@ -75,7 +72,6 @@ class App extends Component {
 
     return (
       <div className="App">
-      
         <Header />
         <Switch>
           <Route 
@@ -91,42 +87,39 @@ class App extends Component {
           <Route 
             path='/create-reviews' 
             component={CreateReview} 
-            // reviews={this.state.reviews}
-             />
+          />
           
           <Route 
             path='/user-reviews' 
             component={UserReviews} 
-             />
+          />
 
           <Route 
             exact path='/bars'
             render={() => <BarsList 
-                            bars={this.state.bars}
-                            currentBar={this.state.currentBar}
-                            setCurrentBar={this.setCurrentBar} />} 
+              bars={this.state.bars}
+              currentBar={this.state.currentBar}
+              setCurrentBar={this.setCurrentBar}
+            />} 
           />   
-           <Route
+
+          <Route
             path='/create-bar'
-            component={ CreateBarPage } />
+            component={ CreateBarPage }
+          />
 
           <Route
             path="/bars/:id"
             render={() => <UpdateBarsPage bars={this.state.bars}
-                                          currentBar={this.state.currentBar}
-                                          setCurrentBar={this.setCurrentBar} />} 
+              currentBar={this.state.currentBar}
+              setCurrentBar={this.setCurrentBar}
+            />} 
           />
 
           <Route 
             exact path='/reviews'
             render={() => <ReviewList reviews={this.state.reviews}/>} 
           />  
-
-          {/* <Route 
-            exact path='/'
-            render={() =>  <Map  bars={this.state.bars} component={Map}/>} 
-          />   */}
-
         </Switch>
       </div>
     );
