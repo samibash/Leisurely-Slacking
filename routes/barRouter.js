@@ -2,7 +2,6 @@ const express = require('express');
 const { Bar } = require('../models');
 const barRouter = express.Router();
 
-
 barRouter.get('/', async (req, res) => {
   try {
     const allbars = await Bar.findAll()
@@ -42,8 +41,7 @@ barRouter.put('/:id', async (req, res) => {
     console.log(`Bar updated`, bar)
     res.json({
       bars
-    });
-    
+    });   
   } catch(e) {
     console.log(e);
     res.status(500).json({
@@ -51,14 +49,5 @@ barRouter.put('/:id', async (req, res) => {
     });
   }
 })
-
-// barRouter.get('/:id', async (req, res) => {
-//   try {
-//     const bar = await Bar.findByPk(req.params.id)
-//     res.json(bar)
-//   } catch (error) {
-//     res.json({ msg: error.status })
-//   }
-// });
 
 module.exports = barRouter

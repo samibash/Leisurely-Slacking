@@ -25,7 +25,7 @@ export const createReview = async (data) => {
     }
 }
 
-export const updateReview = async (id, data)=>{
+export const updateReview = async (id, data) => {
     try {
         const resp = await api.put(`/${id}`, data)
         return resp.data
@@ -34,7 +34,7 @@ export const updateReview = async (id, data)=>{
     }
 }
 
-export const deleteReview = async (id)=>{
+export const deleteReview = async (id) => {
     try {
         const resp = await api.delete(`/${id}`)
         return resp.data

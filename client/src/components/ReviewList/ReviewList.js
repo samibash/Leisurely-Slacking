@@ -2,8 +2,7 @@ import React from 'react';
 import ShowReview from '../ShowReview/ShowReview';
 
 const ReviewList = ({ reviews }) => {
-    const reviewData = reviews && reviews[0]
-    ? reviews.map((reviews, index) => {
+    const reviewData = reviews && reviews[0] ? reviews.map((reviews, index) => {
         return <ShowReview key={ index } reviews={ reviews }/>}) : null
 
     return (
