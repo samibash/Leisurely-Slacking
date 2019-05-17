@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                    <img src="https://i.imgur.com/5eSNGAX.png" />
+                <img src="https://i.imgur.com/5eSNGAX.png" />
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">

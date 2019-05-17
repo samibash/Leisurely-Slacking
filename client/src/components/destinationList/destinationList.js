@@ -4,7 +4,7 @@ import './destinationList.css'
 
 
 const DestinationList = ({ destinations }) => {
-    const data = destinations && destinations.map((destination,index) => {
+    const data = destinations && destinations.map((destination, index) => {
         return <CityLocation key={index} destination={destination}/>
     })
    
@@ -13,7 +13,8 @@ const DestinationList = ({ destinations }) => {
             <section className="section">
                 <div className="columns">
                     <div className="column">
-                        <h1 className="title is-1">Destinations</h1>                         
+                        <h1 className="title is-1">Hakuna Matata!</h1>  
+                        <hr/>                       
                         {data}
                     </div>
                 </div>
