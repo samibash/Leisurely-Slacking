@@ -1,0 +1,38 @@
+.updateBarPage {
+    text-align: center;
+    height: 86.8vh;
+    background-image: url('./bars.jpg');
+    background-size: 100%;
+}
+
+.updateBarPage div {
+    margin: 1%;
+}
+
+.updateBarPage form {
+    padding-top: 28px;
+}
+
+.updateBarPage label {
+    color: rgb(3, 148, 233);
+}
+
+.updateBarPage input {
+    background-color: rgb(3, 148, 233);
+    border: 2px solid blue;
+    color: white;
+}
+
+.updateBarPage button {
+    cursor: pointer;
+    background-color: rgb(3, 148, 233);
+    border: 2px solid blue;
+    border-radius: 4%;
+    width: 100px;
+    height: 25px;
+    color: white;
+}
+
+.updateBarPage button:hover {
+    transform: scale(1.1)
+}

@@ -1,12 +1,8 @@
-.block{
-    display: flex;
-}
-
-.box{
+.box {
     width: 300px;
-    height: 300px
+    height: 300px;
 }
 
-#dis-dis {
-    border-color: hsl(171, 100%, 41%);
+.BarLocation button:hover {
+    transform: scale(1.2)
 }

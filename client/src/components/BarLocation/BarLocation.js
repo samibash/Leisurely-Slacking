@@ -2,16 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './BarLocation.css'
 
-
 const BarLocation = ({ bar, setCurrentBar }) => {
 
   return (
     <div className="BarLocation">
-      <section className="section" id="dis-dis">
+      <section className="section">
         <div className="columns">
-          <div className="column">
-          {/* <Map  bars={} component={Map}/> */}
-          </div>
+          <div className="column"></div>
           <div className="column">
             <div className="BarItem">
               <h2><strong>Name: </strong>{bar.name}</h2>
