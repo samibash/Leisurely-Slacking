@@ -11,10 +11,10 @@ const BarsList = ({bars, currentBar, setCurrentBar}) => {
             setCurrentBar={setCurrentBar}/>})
         : null
     return(
-         <div className="DestinationList">
-        <Map  bars={bars} component={Map}/>
-             <h1>{renderData}</h1>
-         </div>
+        <div className="DestinationList">
+            <Map bars={bars} component={Map}/>
+            <h1>{renderData}</h1>
+        </div>
     )
 }
 
