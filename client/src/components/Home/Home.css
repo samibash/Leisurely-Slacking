@@ -1,7 +1,90 @@
+
 .month {
     border: 2px solid black;
 }
+#jan{
+    background-image:  url('../../images/january.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+}
+#feb{
+    background-image: url('../../images/february.jpeg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
 
+}
+#march{
+    background-image: url('../../images/march.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#april{
+    background-image: url('../../images/april.gif');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#may{
+    background-image: url('../../images/may.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#june{
+    background-image: url('../../images/June.gif');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#july{
+    background-image: url('../../images/july.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#august{
+    background-image: url('../../images/august.png');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#september{
+    background-image: url('../../images/september.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#october{
+    background-image: url('../../images/october.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#november{
+    background-image: url('../../images/november.jpg');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
+#december{
+    background-image: url('../../images/december.gif');
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+
+}
 #calendar {
     display: grid;
     grid-template-rows: repeat(4, 300px);
@@ -9,4 +92,5 @@
     grid-gap: 90px;
     margin-top: 3%;
     padding-left: 12%;
+    background-color: antiquewhite;
 }

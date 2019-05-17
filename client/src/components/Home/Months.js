@@ -4,20 +4,20 @@ function Months() {
     return (
         <div>
             <div id="calendar">
-                <div className="month">January</div>
-                <div className="month">February</div>
-                <div className="month">March</div>
-                <div className="month">April</div>
+                <div id="jan" className="month"></div>
+                <div id="feb" className="month"></div>
+                <div id="march" className="month"></div>
+                <div id="april" className="month"></div>
 
-                <div className="month">May</div>
-                <div className="month">June</div>
-                <div className="month">July</div>
-                <div className="month">August</div>
+                <div id="may" className="month"></div>
+                <div id="june" className="month"></div>
+                <div id="july" className="month"></div>
+                <div id="august" className="month"></div>
 
-                <div className="month">September</div>
-                <div className="month">October</div>
-                <div className="month">November</div>
-                <div className="month">December</div>
+                <div id="september" className="month"></div>
+                <div id="october" className="month"></div>
+                <div id="november" className="month"></div>
+                <div id="december" className="month"></div>
             </div>         
         </div>
     )
