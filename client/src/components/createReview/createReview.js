@@ -103,9 +103,6 @@ class CreateReview extends Component {
           <div className="control">
             <button className="button is-link">Submit</button>
           </div>
-          <div className="control">
-            <button className="button is-text">Cancel</button>
-          </div>
         </div>         
       </form>       
     )
