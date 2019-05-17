@@ -7,12 +7,16 @@ class HotelLocation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showReview:false
+      showReview: false,
+      showButton: true
     }
   }
 
   handleClick =  () => {
-    this.setState({showReview:true})
+    this.setState({
+      showReview: true,
+      showButton: false
+    })
   }
 
   render() {
@@ -27,8 +31,9 @@ class HotelLocation extends Component {
           {this.state.showReview && <CreateReview/>}
           <button 
             onClick={this.handleClick} 
+            style={this.state.showButton ? {} : { display: 'none' } }
             type="button" 
-            value={HotelList.name}>clickToReview
+            value={HotelList.name}>Click to review
           </button>   
         </div>
 
@@ -61,7 +66,6 @@ class HotelLocation extends Component {
             </nav>
             </div>
           <div className="media-right">
-          <button className="delete" />
           </div>
         </article>
       </section>

@@ -12,7 +12,7 @@ const ShowReview = ({ reviews }) => {
 
   return (
     <div className="container">
-      <div className="section" id="this-thang">
+      <div className="section">
         <div className="row columns">
           <div className="column">
             <div className="card large">
@@ -25,9 +25,9 @@ const ShowReview = ({ reviews }) => {
                   </div>
                 </div>
                 <div className="content">
-                <strong>Type: </strong>{reviews.trip_type}
+                  <strong>Type: </strong>{reviews.trip_type}
                   <div className="background-icon"><span className="icon-twitter" /></div>
-              <button onClick={() => onReviewDelete(reviews)}>DELETE</button>
+                  <button onClick={() => onReviewDelete(reviews)}>DELETE</button>
                 </div>
               </div>
             </div>

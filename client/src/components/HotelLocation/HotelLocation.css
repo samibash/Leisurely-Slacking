@@ -1,8 +1,22 @@
 #dis-thingy {
-    border-color: hsl(171, 100%, 41%);
     border: black solid;
     width: 800px;
     display: flex;
     margin-left: 20%;
-    padding: 9rem 1.5rem
+    margin-bottom: 3%;
+    padding: 50px;
+}
+
+
+#dis-thingy button {
+    margin-top: 5%;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(3, 148, 233);
+    color: white;
+    cursor: pointer;
+}
+
+#dis-thingy button:hover {
+    transform: scale(1.2);
 }
