@@ -1,3 +1,36 @@
-.DestinationItem {
+.destination-card {
     display: flex;
+    margin: 3% 8%;
+    background-color: rgba(41, 99, 175, 0.662);
+}
+
+.destination-card:hover {
+    animation: move 4s linear;
+}
+
+@keyframes move {
+    33% {
+        transform: translate(0);
+    }
+    66% {
+        transform: translate(-1000px) rotate(90deg);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.destination-card img {
+    height: 500px;
+    width: 800px;
+    margin: 4%;
+}
+
+.destination-card p {
+    margin-right: 5%;
+    margin-top: 5%;
+    line-height: 1.7em;
+    font-family: 'Macondo Swash Caps', cursive;
+    font-weight: 600;
+    font-size: 1.4em;
 }

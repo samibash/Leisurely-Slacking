@@ -1,10 +1,11 @@
 import React from 'react';
+import './CityLocation.css'
 
 const CityLocation = ({ destination }) => {
 
   return (
-    <div className="DestinationItem">
-      <img src={destination.photo} alt ={destination.name}/>
+    <div className="destination-card">
+      <img src={destination.photo} alt={destination.name}/>
       <p>{destination.description}</p>
     </div>
   );

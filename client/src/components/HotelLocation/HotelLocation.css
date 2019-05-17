@@ -1,11 +1,8 @@
-.section{
+#dis-thingy {
+    border-color: hsl(171, 100%, 41%);
     border: black solid;
-    width:800px;
+    width: 800px;
     display: flex;
     margin-left: 20%;
     padding: 9rem 1.5rem
-}
-
-#dis-thingy {
-    border-color: hsl(171, 100%, 41%);
 }

@@ -1,8 +1,24 @@
-.section {
-    border-color: white;
+.is-1 {
+    text-align: center;
+    font-family: 'Fontdiner Swanky', cursive;
+    color: rgb(3, 148, 233);
+}
+
+.column hr {
+    height: 8px;
+    background-color: rgb(6, 38, 97);
+    box-shadow: 0 2px 8px 1px rgb(3, 148, 233);
+    width: 60%;
+    margin: 0 auto;
+}
+
+#height-adjust h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px black;
 }
 
 #height-adjust {
-    margin: -125px;
-    margin-left: -55px;
+    background-image: url('./water.jpeg');
+    background-size: 100%;
 }
+
